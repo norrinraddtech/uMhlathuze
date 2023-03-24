@@ -1,0 +1,7 @@
+{
+  "name": "umhlathuzeutilitytracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
