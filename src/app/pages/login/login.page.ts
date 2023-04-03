@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
   submit = () => {
     console.log("email", this.login.email)
     console.log("password", this.login.password)
+    this.router.navigateByUrl('tabs');
   }
 
 }
