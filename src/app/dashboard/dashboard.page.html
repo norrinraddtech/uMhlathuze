@@ -5,5 +5,52 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="logo">
+    <ion-img src="../../assets/images/Municipality.png"></ion-img>
+  </div>
+  <div class="balance-overview">
+    <div class="balance-block">
+      <div class="label">
+        <ion-icon name="card"></ion-icon>
+        <ion-label>balance</ion-label>
+      </div>
+      <div class="value">
+        <ion-label>R398.48</ion-label>
+      </div>
+    </div>
+    <div class="balance-block">
+      <div class="label">
+        <ion-icon name="wallet"></ion-icon>
+        <ion-label>due</ion-label>
+      </div>
+      <div class="value">
+        <ion-label>4799.48</ion-label>
+      </div>
+    </div>
+    <div class="balance-block">
+      <div class="label">
+        <ion-icon name="card"></ion-icon>
+        <ion-label>Pay date</ion-label>
+      </div>
+      <div class="balance-value">
+        <ion-label>in 3 days</ion-label>
+      </div>
+    </div>
+  </div>
+  <div class="property-list">
+    <ion-label style="margin-left: 2rem;">YOUR PROPERTIES</ion-label>
+    <ion-list *ngFor="let p of property" class="property" lines="full">
+      <div id="property" class="icon">
+        <ion-img class="icon" src="../../assets/SVG/property.svg"></ion-img>
+      </div>
+      <div class="details">
+        <ion-label>{{ p.name }}</ion-label>
+        <ion-label>{{ p.address }}</ion-label>
+        <ion-label>Utility Usage: R{{ p.usage }}</ion-label>
+      </div>
+      <div id="property" class="arrow">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </ion-list>
+  </div>
 </ion-content>
