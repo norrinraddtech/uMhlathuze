@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'property-view/:id',
     loadChildren: () => import('./pages/property-view/property-view.module').then( m => m.PropertyViewPageModule)
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
   }
 ];
 @NgModule({

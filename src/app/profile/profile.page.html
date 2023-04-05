@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>profile view</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="profile">
+    <div class="image">
+      <ion-icon src="../../../assets/SVG/profile.svg"></ion-icon>
+    </div>
+    <ng-container [ngSwitch]="profileCase">
+      <div class="view-profile" *ngSwitchCase="'view'">
+        <app-view-profile></app-view-profile>
+        <div class="footer">
+          <ion-button shape="round" expand="full" (click)="edit()">Edit Profile</ion-button>
+        </div>
+      </div>
+      <div class="edit-profile" *ngSwitchCase="'edit'">
+        <app-edit-profile></app-edit-profile>
+        <div class="footer">
+          <ion-button shape="round" (click)="save()">Save Profile</ion-button>
+          <ion-button shape="round" (click)="cancel()">Cancel</ion-button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
 </ion-content>
