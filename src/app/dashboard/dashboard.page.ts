@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-dashboard',
@@ -13,9 +14,14 @@ export class DashboardPage implements OnInit {
     { name: 'Penthouse', address: '27 turner st, durban', usage: '37,423.67' },
     { name: 'Town house', address: '378 tuble rd, east london', usage: '24,364.67' }
   ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  viewProperty = (p: any) => {
+    console.log('p', p)
+    this.router.navigateByUrl(`property-view/${JSON.stringify(p)}`)
   }
 
 }

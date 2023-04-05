@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -68,12 +69,14 @@ export class SignupPage implements OnInit {
     password: ['', [Validators.required, Validators.pattern]],
     confirmPassword: ['', [Validators.required, Validators.pattern]]
   })
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
   }
 
   submit = () => {
+
+    this.router.navigateByUrl('tabs');
   }
 
 }

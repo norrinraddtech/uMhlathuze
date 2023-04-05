@@ -12,7 +12,7 @@
     <div class="balance-block">
       <div class="label">
         <ion-icon name="card"></ion-icon>
-        <ion-label>balance</ion-label>
+        <ion-label>Balance</ion-label>
       </div>
       <div class="value">
         <ion-label>R398.48</ion-label>
@@ -21,7 +21,7 @@
     <div class="balance-block">
       <div class="label">
         <ion-icon name="wallet"></ion-icon>
-        <ion-label>due</ion-label>
+        <ion-label>Due</ion-label>
       </div>
       <div class="value">
         <ion-label>4799.48</ion-label>
@@ -30,7 +30,7 @@
     <div class="balance-block">
       <div class="label">
         <ion-icon name="card"></ion-icon>
-        <ion-label>Pay date</ion-label>
+        <ion-label>Pay Date</ion-label>
       </div>
       <div class="balance-value">
         <ion-label>in 3 days</ion-label>
@@ -39,7 +39,7 @@
   </div>
   <div class="property-list">
     <ion-label style="margin-left: 2rem;">YOUR PROPERTIES</ion-label>
-    <ion-list *ngFor="let p of property" class="property" lines="full">
+    <ion-list *ngFor="let p of property" class="property" lines="full" (click)="viewProperty(p)">
       <div id="property" class="icon">
         <ion-img class="icon" src="../../assets/SVG/property.svg"></ion-img>
       </div>

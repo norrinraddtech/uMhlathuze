@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ property.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="property-detail">
+    <div id="property-detail" class="details">
+      <div id="property-detail" class="icon">
+        <ion-img class="icon" src="../../assets/SVG/property.svg"></ion-img>
+      </div>
+      <div id="property-detail" class="info">
+        <ion-label>Invoice Date: 24 July 2020</ion-label>
+        <ion-label>Invoice Number: 32436728</ion-label>
+        <ion-label>Ref Number: 3877367356</ion-label>
+      </div>
+    </div>
+    <div id="invoice" class="info">
+      <div class="row">
+        <ion-label class="col-sm-3 col-md-3">Address: </ion-label>
+        <ion-label class="col-sm-9 col-md-9">{{ property.address }}</ion-label>
+        <ion-label class="col-sm-3 col-md-3">Account Number: </ion-label>
+        <ion-label class="col-sm-9 col-md-9">215672167521</ion-label>
+      </div>
+    </div>
+    <div id="invoice" class="details">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>VAT</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Property Rates</td>
+            <td>R89.60</td>
+            <td>R2,364.37</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <ion-button shape="round">Make Payment</ion-button>
+      <ion-button shape="round">Download Invoice</ion-button>
+    </div>
+  </div>
+</ion-content>

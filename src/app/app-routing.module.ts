@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'property-view/:id',
+    loadChildren: () => import('./pages/property-view/property-view.module').then( m => m.PropertyViewPageModule)
   }
 ];
 @NgModule({
