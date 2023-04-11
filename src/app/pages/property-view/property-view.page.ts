@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Plugin } from '@capacitor/core'
 import { HttpClient } from '@angular/common/http'
 import { FileOpener } from '@ionic-native/file-opener/ngx'
@@ -13,10 +13,11 @@ import { Filesystem, Directory } from '@capacitor/filesystem'
 export class PropertyViewPage implements OnInit {
   
   property = { name: '', address: '', usage: '' };
-  url = 'src/assets/images/bills-invoice-highlighted.png'
+  url = 'assets/images/bills-invoice.pdf'
   constructor(private route: ActivatedRoute, 
     private http: HttpClient,
-    private fileOpener: FileOpener) 
+    private fileOpener: FileOpener,
+    private router: Router) 
   {
     let prop = this.route.snapshot.paramMap.get('id')
     if (prop) {
@@ -26,6 +27,10 @@ export class PropertyViewPage implements OnInit {
   
   ngOnInit() {
     
+  }
+
+  makePayment = () => {
+    this.router.navigateByUrl('tabs/balance')
   }
 
   download = () => {

@@ -12,4 +12,8 @@ export class BalancePage implements OnInit {
   ngOnInit() {
   }
 
+  makePayment = () => {
+    
+  }
+
 }

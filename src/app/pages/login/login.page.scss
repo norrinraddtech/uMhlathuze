@@ -1,31 +1,34 @@
 // .login {
-//     margin: 20px;
-// }
-
-ion-toolbar {
-    text-align: center;
-}
-
-.welcome {
-    text-align: center;
-    label {
-        margin: 2rem,0,2rem,0;
-        font-weight: bolder;
+    //     margin: 20px;
+    // }
+    
+   
+    
+    .welcome {
+        text-align: center;
+        label {
+            margin: 2rem,0,2rem,0;
+            font-weight: bolder;
+        }
     }
-}
-
-.logo {
-    width: 10rem;
-    height: 10rem;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-}
-
-ion-button {
-// color: #131c6c;
-}
-
-.passwordRecovery {
-padding: 10px,0,10px,0;
-}
-
+    
+    .logo {
+        width: 10rem;
+        height: 10rem;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    ion-button {
+        // color: #131c6c;
+    }
+    
+    .passwordRecovery {
+        padding: 10px,0,10px,0;
+    }
+    
+    .submit {
+        padding: 10px 10px 10px 10px;
+        margin: 0 0 3rem 0;
+    }
+    

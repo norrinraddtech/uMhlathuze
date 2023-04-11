@@ -1,16 +1,6 @@
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    display: inline;
-    z-index: 1;
-}
 
 #property-detail.details {
-    background: gray;
     width: 100%;
     display: inline-flex;
     margin-top: 2rem;
@@ -20,15 +10,14 @@
     width: 30%;
     height: inherit;
     position: relative;
-    background: brown;
     padding: 2rem;
+    border-radius: 10px;
 }
 
 #property-detail.info {
     display: block;
     width: 70%;
     padding: 2rem;
-    background: green;
 
     ion-label {
         width: 100%;
@@ -36,9 +25,6 @@
     }
 }
 
-#invoice.info {
-    background: brown;
-}
 
 
 

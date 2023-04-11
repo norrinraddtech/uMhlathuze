@@ -24,3 +24,45 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-content > div {
+    padding: 10px;
+}
+
+ion-button {
+    --ion-color-primary: #0D1D3E;
+    text-decoration: none;
+}
+
+ion-icon {
+    color: #0D1D3E;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: inline;
+    z-index: 1;
+} 
+
+ion-toolbar, .header {
+    text-align: center;
+}
+
+.form {
+    margin-bottom: 3rem;
+    overflow-y: scroll;
+}
+
+div {
+    padding: 2px;
+}
+
+a {
+    margin-left: 5px;
+}
+

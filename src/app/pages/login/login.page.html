@@ -23,13 +23,15 @@
         <input class="form-control" type="password" [(ngModel)]="login.password" placeholder="s3cR3t@su5*^&" />
       </div>
       <div class="passwordRecovery" (click)="forgotPassword()">
-        <a href="/password-recovery">forgot password?</a>
+        <a href="/password-recovery">Forgot Password?</a>
       </div>
       <div class="submit footer">
         <ion-button expand="full" shape="round" (click)="submit()">Login</ion-button>
         <div class="signup">
           <label>Don't have an account? </label>
-          <a [routerLink]="'/signup'">Signup</a>
+          <a [routerLink]="'/signup'">
+            <strong>Sign Up</strong>
+          </a>
         </div>
       </div>
     </div>
