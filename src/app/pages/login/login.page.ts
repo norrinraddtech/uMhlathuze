@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -8,25 +11,47 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  login = {
-    email: '',
-    password: ''
-  }
+  loginForm: FormGroup
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router, 
+    private localstorage: LocalstorageService,
+    private fb: FormBuilder,
+    private loading: LoadingController) 
+    { 
+      this.loginForm = this.fb.group({
+        email: ['', [Validators.required]],
+        password: ['', [Validators.required]]
+      })
+    }
 
   ngOnInit() {
   }
 
+  get errorControl() {
+    return this.loginForm.controls;
+  }
+
   forgotPassword = () => {
+
     this.router.navigateByUrl('');
   }
 
-  submit = () => {
-    console.log("email", this.login.email)
-    console.log("password", this.login.password)
+  submit = async () => {
+    let loading = this.loading.create({
+      spinner: 'circles',
+      showBackdrop: true,
+      backdropDismiss: true
+    });
+
+    (await loading).present()
+    if (this.loginForm.valid) {
+      console.log(this.loginForm)
+      // this.localstorage.set('user', this.loginForm.value);
+    }
+
+    console.log(this.loginForm)
     this.router.navigateByUrl('tabs');
+    (await loading).dismiss()
   }
 
 }

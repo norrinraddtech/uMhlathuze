@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-password-recovery',
@@ -8,7 +9,12 @@ import { Router } from '@angular/router';
 })
 export class PasswordRecoveryPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private platform: Platform) 
+  { 
+    this.platform.backButton.subscribe(() => {
+      console.log('did enter')
+    })
+  }
 
   ngOnInit() {
   }

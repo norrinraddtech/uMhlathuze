@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 
 @Component({
   selector: 'app-create-password',
@@ -8,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class CreatePasswordPage implements OnInit {
 
-  constructor(private router: Router) { }
+  oldPassword: boolean = true;
+  constructor(private router: Router, private localstorage: LocalstorageService) { }
 
   ngOnInit() {
+    this.oldPassword = this.localstorage.get('user') ? true : false
   }
 
   save() {

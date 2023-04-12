@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="end" class="logout">
+      <ion-icon name="power-sharp" (click)="logout()" color="danger"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -44,8 +47,11 @@
         <ion-img class="icon" src="../../assets/SVG/property.svg"></ion-img>
       </div>
       <div class="details">
-        <ion-label>{{ p.name }}</ion-label>
-        <ion-label>{{ p.address }}</ion-label>
+        <ion-label><strong>{{ p.name }}</strong></ion-label>
+        <ion-label>
+          <ion-icon name="location" class="address"></ion-icon>
+          {{ p.address }}
+        </ion-label>
         <ion-label>Utility Usage: R{{ p.usage }}</ion-label>
       </div>
       <div id="property" class="arrow">

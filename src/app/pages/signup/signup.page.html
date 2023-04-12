@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -9,67 +11,67 @@
   <div class="header">
     <h2>Create an Account</h2>
   </div>
-  <form class="signup form">
+  <form class="signup form" [formGroup]="signupForm" (ngSubmit)="submit()" novalidate>
     <div class="label">
-      <label for="firstname" class="form-label floating">First name</label>
-      <input type="text" class="form-control" id="firstname">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">First name</ion-label>
+      <input type="text" class="form-control" formControlName="firstname" required>
+      <div *ngFor="let err of errorMessages.firstname">
+        <ng-container *ngIf="errorControl.firstname.errors?.required && errorControl.firstname.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="label">
-      <label for="lastname" class="form-label">Last name</label>
-      <input type="text" class="form-control" id="lastname">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">Last name</ion-label>
+      <input type="text" class="form-control" formControlName="lastname" required>
+      <div *ngFor="let err of errorMessages.lastname">
+        <ng-container *ngIf="errorControl.lastname.errors?.required && errorControl.lastname.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="label">
-      <label for="email" class="form-label">Email</label>
-      <input type="text" class="form-control" id="email">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">Email</ion-label>
+      <input type="text" class="form-control" formControlName="email" required>
+      <div *ngFor="let err of errorMessages.email">
+        <ng-container *ngIf="errorControl.email.errors?.required && errorControl.email.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="label">
-      <label for="idnumber" class="form-label">ID Number</label>
-      <input type="number" maxlength="13" class="form-control" id="idnumber">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">ID Number</ion-label>
+      <input type="number" maxlength="13" class="form-control" formControlName="idnumber" required>
+      <div *ngFor="let err of errorMessages.idnumber">
+        <ng-container *ngIf="errorControl.idnumber.errors?.required && errorControl.idnumber.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="label">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">Password</ion-label>
+      <input type="password" class="form-control" formControlName="password" required>
+      <div *ngFor="let err of errorMessages.password">
+        <ng-container *ngIf="errorControl.password.errors?.required && errorControl.password.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="label">
-      <label for="confirmPassword" class="form-label">Confirm Password</label>
-      <input type="password" class="form-control" id="confirmPassword">
-      <!-- <div *ngFor="let err of errorMessages.firstname">
-        <ng-container *ngIf="firstname.errors?">
-          <small>{{ err.message }}</small>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <input type="password" class="form-control" formControlName="confirmPassword" required>
+      <div *ngFor="let err of errorMessages.confirmPassword">
+        <ng-container *ngIf="errorControl.confirmPassword.errors?.required && errorControl.confirmPassword.touched">
+          <small class="text-danger">{{ err.message }}</small>
         </ng-container>
-      </div> -->
+      </div>
     </div>
     <div class="submit footer">
       <div class="button">
-        <ion-button shape="round" expand="full" type="submit" (click)="submit()">Submit</ion-button>
+        <ion-button shape="round" expand="full" type="submit" [disabled]="!signupForm.valid">Submit</ion-button>
       </div>
       <div class="login">
-        <label>Already have an account? </label>
+        <ion-label>Already have an account? </ion-label>
         <a [routerLink]="'/login'">
           <strong>Login</strong>
         </a>

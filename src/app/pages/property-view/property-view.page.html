@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>{{ property.name }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/dashboard"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -11,17 +14,27 @@
         <ion-img class="icon" src="../../assets/SVG/property.svg"></ion-img>
       </div>
       <div id="property-detail" class="info">
-        <ion-label>Invoice Date: 24 July 2020</ion-label>
-        <ion-label>Invoice Number: 32436728</ion-label>
-        <ion-label>Ref Number: 3877367356</ion-label>
+        <ion-label>Invoice Date: 24 Jul 2020</ion-label>
+        <ion-label>Invoice No: 32436728</ion-label>
+        <ion-label>Ref No: 3877367356</ion-label>
       </div>
     </div>
     <div id="invoice" class="info">
       <div class="row">
-        <ion-label class="col-sm-3 col-md-3">Address: </ion-label>
-        <ion-label class="col-sm-9 col-md-9">{{ property.address }}</ion-label>
-        <ion-label class="col-sm-3 col-md-3">Account Number: </ion-label>
-        <ion-label class="col-sm-9 col-md-9">215672167521</ion-label>
+        <ion-row>
+          <ion-col size="3">
+            <ion-label>Address: </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-label>{{ property.address }}</ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <ion-label>Acc No: </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-label>215672167521</ion-label>
+          </ion-col>
+        </ion-row>
       </div>
     </div>
     <div id="invoice" class="details">

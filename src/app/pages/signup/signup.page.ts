@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,6 +33,7 @@ export class SignupPage implements OnInit {
     return this.signupForm.get('confirmPassword')
   }
 
+
   errorMessages = {
     firstname: [
       { type: 'required', message: 'firstname is required' }
@@ -61,22 +62,30 @@ export class SignupPage implements OnInit {
     ]
   }
 
-  signupForm = this.fb.group({
-    firstname: ['', Validators.required],
-    lastname: ['', Validators.required],
-    idnumber: ['', [Validators.required, Validators.maxLength]],
-    email: ['', [Validators.required, Validators.pattern]],
-    password: ['', [Validators.required, Validators.pattern]],
-    confirmPassword: ['', [Validators.required, Validators.pattern]]
-  })
-  constructor(private fb: FormBuilder, private router: Router) { }
+  signupForm: FormGroup
+  constructor(private fb: FormBuilder, private router: Router) 
+  {
+    this.signupForm = this.fb.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      idnumber: ['', [Validators.required, Validators.maxLength(13)]],
+      email: ['', [Validators.required, Validators.pattern]],
+      password: ['', [Validators.required, Validators.pattern]],
+      confirmPassword: ['', [Validators.required, Validators.pattern]]
+    })
+  }
 
   ngOnInit() {
   }
 
   submit = () => {
 
-    this.router.navigateByUrl('tabs');
+    console.log(this.signupForm)
+    // this.router.navigateByUrl('tabs');
+  }
+
+  get errorControl() {
+    return this.signupForm.controls;
   }
 
 }

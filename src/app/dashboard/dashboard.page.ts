@@ -24,4 +24,8 @@ export class DashboardPage implements OnInit {
     this.router.navigateByUrl(`property-view/${JSON.stringify(p)}`)
   }
 
+  logout = () => {
+    this.router.navigateByUrl('login')
+  }
+
 }

@@ -6,27 +6,30 @@
 </ion-header>
 
 <ion-content>
-  <div class="login container">
-    <!-- <div class="welcome">
-      <label>Welcome</label>
-    </div> -->
+  <form class="login container" [formGroup]="loginForm" (ngSubmit)="submit()">
     <div class="d-flex justify-content-center">
       <img class="logo" src="../../../assets/images/Municipality.png" />
     </div>
     <div class="container-fluid credentials">
       <div class="email">
-        <label class="form-label">Email</label>
-        <input class="form-control" type="text" [(ngModel)]="login.email" placeholder="email@domain.com" />
+        <ion-label class="form-label">Email</ion-label>
+        <input formControlName="email" class="form-control" type="text" placeholder="email@domain.com" required/>
       </div>
+      <ng-container *ngIf="errorControl.email.errors?.required && errorControl.email.touched">
+        <small class="text-danger">Email is required</small>
+      </ng-container>
       <div class="password">
-        <label class="form-label">Password</label>
-        <input class="form-control" type="password" [(ngModel)]="login.password" placeholder="s3cR3t@su5*^&" />
+        <ion-label class="form-label">Password</ion-label>
+        <input formControlName="password" class="form-control" type="password" placeholder="s3cR3t@su5*^&" required/>
       </div>
+      <ng-container *ngIf="errorControl.password.errors?.required && errorControl.password.touched">
+        <small class="text-danger">Password is required</small>
+      </ng-container>
       <div class="passwordRecovery" (click)="forgotPassword()">
         <a href="/password-recovery">Forgot Password?</a>
       </div>
-      <div class="submit footer">
-        <ion-button expand="full" shape="round" (click)="submit()">Login</ion-button>
+      <div class="submit">
+        <ion-button type="submit" expand="full" shape="round" [disabled]="!loginForm.valid">Login</ion-button>
         <div class="signup">
           <label>Don't have an account? </label>
           <a [routerLink]="'/signup'">
@@ -35,5 +38,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </form>
 </ion-content>
+
+
