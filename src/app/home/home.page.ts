@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage implements OnInit {
 
   invoices = [
-    {invoiceId: 450000239843, date: '12/02/23', amount: 89238 },
-    {invoiceId: 450000239843, date: '12/02/23', amount: 89238 }
+    {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.90 },
+    {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.78 }
   ];
+
+  
   constructor() { }
 
   ngOnInit() {
