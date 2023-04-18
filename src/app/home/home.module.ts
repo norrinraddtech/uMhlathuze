@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { AccountsModule } from '../shared-modules/accounts.module';
+import { InvoicesModule } from '../shared-modules/invoices.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AccountsModule } from '../shared-modules/accounts.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    AccountsModule
+    AccountsModule,
+    InvoicesModule
   ],
   declarations: [HomePage]
 })
