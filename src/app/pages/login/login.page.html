@@ -6,21 +6,21 @@
 </ion-header>
 
 <ion-content>
-  <form class="login container" [formGroup]="loginForm" (ngSubmit)="submit()">
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
     <div class="d-flex justify-content-center">
       <img class="logo" src="../../../assets/images/Municipality.png" />
     </div>
     <div class="container-fluid credentials">
       <div class="email">
-        <ion-label class="form-label">Email</ion-label>
-        <input formControlName="email" class="form-control" type="text" placeholder="email@domain.com" required/>
+        <ion-label class="form-label">ID Number/Org Ref</ion-label>
+        <input formControlName="email" class="form-control" type="text" required/>
       </div>
       <ng-container *ngIf="errorControl.email.errors?.required && errorControl.email.touched">
-        <small class="text-danger">Email is required</small>
+        <small class="text-danger">ID Number or Org Ref is required</small>
       </ng-container>
       <div class="password">
         <ion-label class="form-label">Password</ion-label>
-        <input formControlName="password" class="form-control" type="password" placeholder="s3cR3t@su5*^&" required/>
+        <input formControlName="password" class="form-control" type="password" required/>
       </div>
       <ng-container *ngIf="errorControl.password.errors?.required && errorControl.password.touched">
         <small class="text-danger">Password is required</small>

@@ -50,7 +50,7 @@ export class LoginPage implements OnInit {
     }
 
     console.log(this.loginForm)
-    this.router.navigateByUrl('tabs');
+    this.router.navigateByUrl('home');
     (await loading).dismiss()
   }
 

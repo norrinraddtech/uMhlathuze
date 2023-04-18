@@ -1,0 +1,187 @@
+<!-- <ion-header>
+  
+  <ion-toolbar>
+    
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="home">
+    <div class="header">
+      <ion-item lines="none">
+        <ion-img class="logo" slot="end" src="../../assets/images//Municipality.png"></ion-img>
+      </ion-item>
+    </div>
+    <div class="body">
+      <ion-item class="bottom-border" lines="full">
+          <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
+          <ion-label class="customer-name" type="text">Devendran Naidoo</ion-label>
+      </ion-item>
+      <ion-item class="bottom-border" lines="full">
+        <ion-label class="currentDateTime" slot="end">Updated 2023.04.12, 14:43</ion-label>
+      </ion-item>
+      <ion-item class="bottom-border" lines="full">
+        <div class="block details">
+          <div class="keys">
+            <ion-label>Partner:</ion-label>
+            <ion-label>Language:</ion-label>
+            <ion-label>ID Number:</ion-label>
+          </div>
+          <div class="values">
+            <ion-label>450000239843</ion-label>
+            <ion-label>English</ion-label>
+            <ion-label>779023893263</ion-label>
+          </div>
+        </div>
+        <ion-row>
+          <ion-col size="4" class="address">
+            <ion-label><strong>Address:</strong></ion-label>
+          </ion-col>
+          <ion-col size="8" class="address-value">
+            <ion-label>16 UMNGAMANZI</ion-label>
+            <ion-label>NSELENI A EXT. 01</ion-label>
+            <ion-label>NSELENI</ion-label>
+            <ion-label>PO Box 1405</ion-label>
+          </ion-col>
+        </ion-row>
+        <!-- <div class="block address row">
+          <div class="keys col-sm-2">
+            <ion-label>Address:</ion-label>
+          </div>
+          <div class="values col-sm-10">
+            <ion-label>16 UMNGAMANZI</ion-label>
+            <ion-label>NSELENI A EXT. 01</ion-label>
+            <ion-label>NSELENI</ion-label>
+            <ion-label>PO Box 1405</ion-label>
+          </div>
+        </div> -->
+      </ion-item>
+      <ion-item  lines="none" *ngFor="let i of invoices">
+        <div class="icon">
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="address_2">
+          <strong>
+            <ion-label>16 UMNGAMANZI</ion-label>
+            <ion-label>NSELENI A EXT. 01</ion-label>
+            <ion-label>NSELENI</ion-label>
+            <ion-label>PO Box 1405</ion-label>
+          </strong>
+        </div>
+        <div class="balance">
+          <div class="accountNo">
+            <div class="key">
+              <ion-label>Account No.</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>100005260938</ion-label>
+            </div>
+          </div>
+          <div class="arrears">
+            <div class="key">
+              <ion-label>Arrears</ion-label>
+              <ion-label>Account Balance</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>R1,234.87</ion-label>
+              <ion-label>R9,893,487.00</ion-label>
+            </div>
+          </div>
+          <!-- <div class="account-balance">
+            <div class="key">
+              <ion-label>Acc Bal.</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>R9,893,487.00</ion-label>
+            </div>
+          </div> -->
+        </div>
+      </ion-item>
+      <!-- <ion-item lines="none">
+        <div class="icon">
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="address_2">
+          <ion-label>16 UMNGAMANZI</ion-label>
+          <ion-label>NSELENI A EXT. 01</ion-label>
+          <ion-label>NSELENI</ion-label>
+          <ion-label>PO Box 1405</ion-label>
+        </div>
+        <div class="balance">
+          <div class="accountNo">
+            <div class="key">
+              <ion-label>Acc No.</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>100005260938</ion-label>
+            </div>
+          </div>
+          <div class="arrears">
+            <div class="key">
+              <ion-label>Arrears</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>1,234.87</ion-label>
+            </div>
+          </div>
+          <div class="account-balance">
+            <div class="key">
+              <ion-label>Acc Bal.</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>R9,893,487.00</ion-label>
+            </div>
+          </div>
+          <div class="payment">
+            <div class="key">
+              <ion-label>Payment</ion-label>
+            </div>
+            <div class="value">
+              <ion-label>R9,893,487.00</ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-item> -->
+      
+      <!-- <div class="invoice">
+        <ion-item lines="none" *ngFor="let i of invoices">
+          <ion-row class="row">
+            <ion-col size="1" class="icon ">
+              <ion-icon name="document"></ion-icon>
+            </ion-col>
+            <ion-col size="2" class="">
+              <ion-label>Date</ion-label>
+              <ion-label>Invoice</ion-label>
+            </ion-col>
+            <ion-col size="4" class="">
+              <ion-label>{{ i.date }}</ion-label>
+              <ion-label>{{ i.invoiceId }}</ion-label>
+            </ion-col>
+            <ion-col size="2" class="">
+              <ion-label><strong>Amount</strong></ion-label>
+            </ion-col>
+            <ion-col size="3" class="">
+              <ion-label>R{{ i.amount }}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </div> -->
+      <div class="bottom">
+        <div class="notice">
+          <small id="notice">Please note that the city will be implementing a standard rates increase from 1 July 2023</small>
+        </div>
+        <div class="menu">
+          <ion-row>
+            <ion-col size="4">
+              <ion-icon class="icon menu-item" name="home"></ion-icon>
+            </ion-col>
+            <ion-col size="1">
+              <ion-icon class="icon menu-item" name="wallet"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

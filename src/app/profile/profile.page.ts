@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 export class ProfilePage implements OnInit {
 
   profileCase: string = 'view'
+  profile = {
+    firstname: 'Brad',
+    lastname: 'Pitt',
+    idnumber: '5783923874287',
+    email: 'brad@pitt.co'
+  }
   constructor(private router: Router) { }
 
   ngOnInit() {

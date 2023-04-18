@@ -5,15 +5,23 @@
 .label {
     // margin-top: auto;
     // margin-bottom: auto;
+    ion-icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+    }
 }
 
 .balance-block {
     width: 7rem;
     display: inline-block;
     text-align: center;
+    display: inline-block;
     
     .label > ion-label {
         font-weight: bold;
+        margin: 20% 0 20%;
+        font-size: medium;
     }
 }
 
