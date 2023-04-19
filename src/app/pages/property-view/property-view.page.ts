@@ -54,6 +54,8 @@ export class PropertyViewPage implements OnInit {
           // (await this.message.presentToast('PDF Downloaded Successfully!', 'success')).present()
 
           const path = savedFile.uri
+          
+          this.url = savedFile.uri;
 
           // const uriPath = await Filesystem.getUri({
           //   directory: Directory.Documents,

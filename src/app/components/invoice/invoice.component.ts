@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-invoice',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent  implements OnInit {
 
+  @Output('openInvoicePDF') openInvoicePDF: EventEmitter<boolean> = new EventEmitter();
   invoices = [
     {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.90 },
     {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.78 }
@@ -15,4 +16,7 @@ export class InvoiceComponent  implements OnInit {
 
   ngOnInit() {}
 
+  open = () => {
+    this.openInvoicePDF.emit(true)
+  }
 }

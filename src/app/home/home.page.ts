@@ -9,11 +9,8 @@ export class HomePage implements OnInit {
 
   invoices = false;
   showHome = true;
-  // invoices = [
-  //   {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.90 },
-  //   {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.78 }
-  // ];
-
+  showInvoicePDF = false
+  url = 'assets/images/bills-invoice.pdf'
   
   constructor() { }
 
@@ -26,8 +23,19 @@ export class HomePage implements OnInit {
   }
 
   openHome = () => {
+    this.showHome = true;
     this.invoices = false;
-    this.showHome = true
+  }
+
+  close = () => {
+    this.invoices = true;
+    this.showHome = false;
+    this.showInvoicePDF = false;
+  }
+
+  openPDF = () => {
+    this.invoices = false;
+    this.showInvoicePDF = true;
   }
 
 }
