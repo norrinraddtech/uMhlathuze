@@ -1,10 +1,17 @@
 
 .icon {
-    text-align: end;
+    // text-align: end;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
 
     ion-icon {
-        width: 2rem;
-        height: 2rem;
-        margin-right: 1rem;
+        background: #efebeb;
+        color: rgb(143, 137, 137);
+        width: 35px;
+        height: 35px;
+        // margin-right: 1rem;
     }
 }
