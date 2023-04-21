@@ -7,7 +7,7 @@
     <ion-col size="8" id="credit_card" class="card_details">
       <ion-label>
         {{ c.type }}
-      <ion-icon id="icon" class="selected" name="checkmark-circle-sharp"></ion-icon>
+      <ion-icon *ngIf="c.default" id="icon" class="selected" name="checkmark-circle-sharp"></ion-icon>
       </ion-label>
       <ion-label>{{ c.holder }}</ion-label>
       <ion-label>{{ c.cardNumber }}</ion-label>

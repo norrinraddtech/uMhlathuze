@@ -43,13 +43,13 @@
       </ion-item>
       <div class="border_bottom" style="margin-bottom: 0.7rem;"></div>
       
-      <app-accounts *ngIf="showHome" (openInvoice)="openInvoice($event)"></app-accounts>
+      <!-- <app-accounts *ngIf="showHome" (openInvoice)="openInvoice($event)"></app-accounts>
         
         <app-invoice *ngIf="invoices" (openInvoicePDF)="openPDF()"></app-invoice>
-        <app-display-invoice *ngIf="showInvoicePDF" class="display_invoice" (closeInvoice)="close()"></app-display-invoice>
+        <app-display-invoice *ngIf="showInvoicePDF" class="display_invoice" (closeInvoice)="close()"></app-display-invoice> -->
      
       <!-- <app-payment *ngIf="showPayment"></app-payment> -->
-      <!-- <app-bank-card></app-bank-card> -->
+      <app-bank-card></app-bank-card>
       <div class="bottom" *ngIf="!showInvoicePDF">
 
         <div *ngIf="showBankCard" class="paygate">
@@ -67,6 +67,7 @@
         </div>
         
         <div *ngIf="showPayment" class="row">
+          <div class="border_bottom"></div>
           <ion-row>
             <ion-col size="2">
               <ion-img id="svg" src="../../assets/SVG/credit card icon.svg" (click)="openHome()"></ion-img>
@@ -86,9 +87,9 @@
             </ion-col>
           </ion-row>
         </div>
-        <div class="notice" *ngIf="showHome">
+        <!-- <div class="notice" *ngIf="showHome">
           <small id="notice">Please note that the city will be implementing a standard rates increase from 1 July 2023</small>
-        </div>
+        </div> -->
         <div class="menu">
           <ion-row>
             <ion-col size="4">

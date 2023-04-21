@@ -11,7 +11,7 @@ export class HomePage implements OnInit {
   showHome = true;
   showInvoicePDF = false
   showPayment = false;
-  showBankCard = false;
+  showBankCard = true;
   url = 'assets/images/bills-invoice.pdf'
   
   constructor() { }
