@@ -292,7 +292,10 @@ ion-img.paygate {
 
 div.paygate {
     height: 3rem;
+    width: 100%;
     padding-right: 2rem;
 }
 
-
+ion-row.paygate {
+    width: 100%;
+}
