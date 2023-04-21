@@ -239,4 +239,60 @@ ion-icon.success {
     z-index: 1;
 }
 
+div.row {
+    border-top: 2px solid;
+    height: 5rem;
+
+    ion-row {
+        width: 100%;
+    }
+}
+
+
+//payment
+.card_details {
+    text-align: left;
+    ion-label {
+        display: block;
+        font-weight: bold;
+        width: 8rem;
+    }
+}
+
+.amount_payable {
+    text-align: center;
+    ion-label.empty {
+        color: white;
+        display: block;
+    }
+
+    ion-label {
+        display: block;
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+ion-label.add_card {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ion-icon.add_card {
+    width: 2rem;
+    height: 1.7rem;
+}
+
+ion-img.paygate {
+    width: 4rem;
+    height: 2rem;
+    
+}
+
+div.paygate {
+    height: 3rem;
+    padding-right: 2rem;
+}
+
 

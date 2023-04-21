@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
 import { Plugin } from '@capacitor/core'
 import { HttpClient } from '@angular/common/http'
-import { FileOpener } from '@ionic-native/file-opener/ngx'
+// import { FileOpener } from '@ionic-native/file-opener/ngx'
 import { Filesystem, Directory } from '@capacitor/filesystem'
 import { AlertController, ToastController } from '@ionic/angular';
 import { MessageService } from 'src/app/services/message.service';
@@ -18,7 +18,7 @@ export class PropertyViewPage implements OnInit {
   url = 'assets/images/bills-invoice.pdf'
   constructor(private route: ActivatedRoute, 
     private http: HttpClient,
-    private fileOpener: FileOpener,
+    // private fileOpener: FileOpener,
     private toast: ToastController,
     private message: MessageService,
     private router: Router) 
@@ -62,8 +62,8 @@ export class PropertyViewPage implements OnInit {
           //   path: name
           // })
 
-          this.fileOpener.open(path, 'application/pdf')
-          .then(() => console.log('file opened'))
+          // this.fileOpener.open(path, 'application/pdf')
+          // .then(() => console.log('file opened'))
           
         } catch (error) {
 

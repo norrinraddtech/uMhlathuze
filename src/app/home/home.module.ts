@@ -10,6 +10,8 @@ import { HomePage } from './home.page';
 import { AccountsModule } from '../shared-modules/accounts.module';
 import { InvoicesModule } from '../shared-modules/invoices.module';
 import { DisplayInvoiceModule } from '../shared-modules/display-invoice.module';
+import { PaymentModule } from '../shared-modules/payment.module';
+import { BankCardModule } from '../shared-modules/bank-card.module';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { DisplayInvoiceModule } from '../shared-modules/display-invoice.module';
     HomePageRoutingModule,
     AccountsModule,
     InvoicesModule,
-    DisplayInvoiceModule
+    DisplayInvoiceModule,
+    PaymentModule,
+    BankCardModule
   ],
   declarations: [HomePage]
 })

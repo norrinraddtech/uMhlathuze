@@ -1,0 +1,19 @@
+
+<ion-item lines="none" *ngFor="let c of cards">
+  <ion-row class="row">
+    <ion-col id="invoice" size="2" class="icon">
+      <ion-img id="svg" src="../../../assets/SVG/credit card icon.svg"></ion-img>
+    </ion-col>
+    <ion-col size="8" id="credit_card" class="card_details">
+      <ion-label>
+        {{ c.type }}
+      <ion-icon id="icon" class="selected" name="checkmark-circle-sharp"></ion-icon>
+      </ion-label>
+      <ion-label>{{ c.holder }}</ion-label>
+      <ion-label>{{ c.cardNumber }}</ion-label>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon id="icon" class="delete" name="trash-sharp"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-item>
