@@ -299,3 +299,28 @@ div.paygate {
 ion-row.paygate {
     width: 100%;
 }
+
+#updated_date {
+    height: 2rem;
+    ion-label {
+        margin-top: -0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+ #customer_name {
+    height: 2.5rem;
+    ion-label {
+        margin-top: 0;
+    }
+    ion-icon {
+        margin-top: -0.5rem;
+    }
+}
+
+.border_bottom {
+    margin-left: 5%;
+    width: 90%;
+    border-bottom: 2px solid #707070;
+}
+

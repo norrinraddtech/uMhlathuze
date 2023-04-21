@@ -7,14 +7,16 @@
       </ion-item>
     </div>
     <div class="body">
-      <ion-item class="bottom-border" lines="full">
+      <ion-item id="customer_name" lines="full">
         <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
         <ion-label class="customer-name" type="text">Devendran Naidoo</ion-label>
       </ion-item>
-      <ion-item *ngIf="!showInvoicePDF" class="bottom-border" lines="full">
+      <div class="border_bottom"></div>
+      <ion-item *ngIf="!showInvoicePDF" id="updated_date" lines="full">
         <ion-label class="currentDateTime" slot="end">Updated 2023.04.12, 14:43</ion-label>
       </ion-item>
-      <ion-item *ngIf="!showInvoicePDF" class="bottom-border" lines="full">
+      <div class="border_bottom"></div>
+      <ion-item *ngIf="!showInvoicePDF" lines="none">
         <div class="block details">
           <div class="keys">
             <ion-label>Partner:</ion-label>
@@ -39,14 +41,15 @@
           </ion-col>
         </ion-row>
       </ion-item>
+      <div class="border_bottom"></div>
       
-      <!-- <app-accounts *ngIf="showHome" (openInvoice)="openInvoice($event)"></app-accounts>
+      <app-accounts *ngIf="showHome" (openInvoice)="openInvoice($event)"></app-accounts>
         
         <app-invoice *ngIf="invoices" (openInvoicePDF)="openPDF()"></app-invoice>
         <app-display-invoice *ngIf="showInvoicePDF" class="display_invoice" (closeInvoice)="close()"></app-display-invoice>
-      -->
-      <app-payment *ngIf="showPayment"></app-payment>
-      <app-bank-card></app-bank-card>
+     
+      <!-- <app-payment *ngIf="showPayment"></app-payment> -->
+      <!-- <app-bank-card></app-bank-card> -->
       <div class="bottom" *ngIf="!showInvoicePDF">
 
         <div *ngIf="showBankCard" class="paygate">
@@ -83,9 +86,9 @@
             </ion-col>
           </ion-row>
         </div>
-        <!-- <div class="notice" *ngIf="showHome">
+        <div class="notice" *ngIf="showHome">
           <small id="notice">Please note that the city will be implementing a standard rates increase from 1 July 2023</small>
-        </div> -->
+        </div>
         <div class="menu">
           <ion-row>
             <ion-col size="4">
