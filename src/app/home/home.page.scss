@@ -32,6 +32,9 @@ ion-label.customer-name {
     width: 20%;
 }
 
+.block, .address, .address-value {
+    padding-top: 0.7rem;
+}
 
 .block.details {
     width: 50%;
@@ -40,7 +43,6 @@ ion-label.customer-name {
     
     .keys {
         width: 65px;
-        
         ion-label {
             display: block;
         }
@@ -156,6 +158,7 @@ div.menu {
     box-shadow: -10px 0 10px 0 black;
     padding: 1rem;
     width: 100%;
+    height: 56px;
 }
 
 ion-icon.menu-item {
@@ -227,7 +230,11 @@ ion-icon.success {
 
 #svg.menu {
     width: 3rem;
-    height: 3rem;
+}
+
+#svg {
+    width: 25px;
+    height: 25px;
 }
 
 //display invoice
