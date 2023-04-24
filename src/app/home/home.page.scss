@@ -291,10 +291,23 @@ ion-icon.add_card {
     height: 1.7rem;
 }
 
-ion-img.paygate {
+.paygateIcon {
+    ion-icon {
+        width: 9rem;
+        height: 2rem;
+        background: orange;
+    }
+}
+
+ion-img#paygateIcon {
     width: 4rem;
     height: 2rem;
-    
+}
+
+ion-icon#payment {
+    margin-top: 1.7rem;
+    margin-right: 6rem;
+    margin-left: -1rem;
 }
 
 div.paygate {

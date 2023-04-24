@@ -19,6 +19,11 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  openBankCard = () => {
+    this.showBankCard = true
+    this.showHome = false
+  }
+
   backToAccounts = (event: any) => {
     this.showPayment = !event
     this.showHome = event
@@ -42,6 +47,8 @@ export class HomePage implements OnInit {
   openHome = () => {
     this.showHome = true;
     this.showPayment = false;
+    this.showBankCard = false;
+    this.invoices = false
   }
 
   close = () => {

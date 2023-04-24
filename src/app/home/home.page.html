@@ -15,7 +15,7 @@
       <ion-item *ngIf="!showInvoicePDF" id="updated_date" lines="full">
         <ion-label class="currentDateTime" slot="end">Updated 2023.04.12, 14:43</ion-label>
       </ion-item>
-      <div class="border_bottom"></div>
+      <div *ngIf="!showInvoicePDF" class="border_bottom"></div>
       <ion-item *ngIf="!showInvoicePDF" lines="none">
         <div class="block details">
           <div class="keys">
@@ -41,7 +41,7 @@
           </ion-col>
         </ion-row>
       </ion-item>
-      <div class="border_bottom" style="margin-bottom: 0.7rem;"></div>
+      <div *ngIf="!showInvoicePDF" class="border_bottom" style="margin-bottom: 0.7rem;"></div>
       
       <app-accounts *ngIf="showHome" (openPayment)="openPayment($event)"></app-accounts>
         
@@ -61,7 +61,8 @@
               <ion-label class="add_card">Add Card</ion-label>
             </ion-col>
             <ion-col size="2" class="paygate">
-              <ion-img id="svg" class="paygate" src="../../assets/paygate.png"></ion-img>
+              <!-- <ion-icon id="svg" src="../../assets/SVG/Asset 1.svg"></ion-icon> -->
+              <ion-img id="paygateIcon" class="" src="../../assets/paygate.png"></ion-img>
             </ion-col>
           </ion-row>
         </div>
@@ -83,7 +84,7 @@
               <ion-label>R7,378,383,837.12</ion-label>
             </ion-col>
             <ion-col size="2">
-              <ion-icon id="svg" src="../../assets/SVG/Payments.svg"></ion-icon>
+              <ion-icon id="payment" src="../../assets/SVG/Payments.svg"></ion-icon>
             </ion-col>
           </ion-row>
         </div>
@@ -96,7 +97,7 @@
               <ion-img id="svg" src="../../assets/SVG/House.svg" (click)="openHome()"></ion-img>
             </ion-col>
             <ion-col size="4">
-              <ion-img id="svg" src="../../assets/SVG/card details.svg"></ion-img>
+              <ion-img id="svg" src="../../assets/SVG/card details.svg" (click)="openBankCard()"></ion-img>
             </ion-col>
           </ion-row>
         </div>
