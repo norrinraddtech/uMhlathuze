@@ -9,9 +9,9 @@ export class HomePage implements OnInit {
 
   invoices = false;
   showHome = true;
-  showInvoicePDF = false
+  showInvoicePDF = false;
   showPayment = false;
-  showBankCard = true;
+  showBankCard = false;
   url = 'assets/images/bills-invoice.pdf'
   
   constructor() { }
@@ -19,14 +19,29 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  backToAccounts = (event: any) => {
+    this.showPayment = !event
+    this.showHome = event
+  }
+
+  backToPayment = (event: any) => {
+    this.invoices = !event
+    this.showPayment = event
+  }
+
   openInvoice = (event: any) => {
-    this.invoices = event;
+    this.showPayment = !event
+    this.invoices = event
+  }
+
+  openPayment = (event: any) => {
+    this.showPayment = event;
     this.showHome = !event
   }
 
   openHome = () => {
     this.showHome = true;
-    this.invoices = false;
+    this.showPayment = false;
   }
 
   close = () => {

@@ -8,6 +8,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class InvoiceComponent  implements OnInit {
 
   @Output('openInvoicePDF') openInvoicePDF: EventEmitter<boolean> = new EventEmitter();
+  @Output('backToPayment') backToPayment: EventEmitter<boolean> = new EventEmitter();
+  @Output('backToAccounts') backToAccounts: EventEmitter<boolean> = new EventEmitter();
   invoices = [
     {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.90 },
     {invoiceId: 4500000842, date: '12.02.2023', amount: 89238.78 }
@@ -18,5 +20,13 @@ export class InvoiceComponent  implements OnInit {
 
   open = () => {
     this.openInvoicePDF.emit(true)
+  }
+
+  navigateBackToPayments = () => {
+    this.backToPayment.emit(true)
+  }
+
+  navigateBackToAccounts = () => {
+    this.backToAccounts.emit(true)
   }
 }

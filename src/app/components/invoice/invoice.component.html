@@ -1,7 +1,8 @@
 <div class="invoice">
-  <ion-item  lines="none">
-    <div class="icon">
-      <ion-icon name="home"></ion-icon>
+  <ion-item  lines="none" (click)="navigateBackToAccounts()">
+    <div class="icon invoiceIcon">
+      <!-- <ion-icon name="home"></ion-icon> -->
+      <ion-icon id="svg" src="../../../assets/SVG/House.svg"></ion-icon>
     </div>
     <div class="address_2">
       <strong>
@@ -32,15 +33,16 @@
       </div>
     </div>
   </ion-item>
+  <div class="border_bottom"></div>
   <div class="row">
-    <ion-label class="col-3 invoice_heading">Payments</ion-label>
+    <ion-label class="col-3 invoice_heading" (click)="navigateBackToPayments()">Payments</ion-label>
     <ion-label class="col-9 invoice_heading">Invoices</ion-label>
   </div>
-  <ion-item lines="none" *ngFor="let i of invoices" (click)="open()">
+  <div class="border_bottom"></div>
+  <ion-item class="item" lines="none" *ngFor="let i of invoices" (click)="open()">
     <ion-row class="row">
       <ion-col id="invoice" size="1" class="icon">
-        <ion-img id="svg" src="../../../assets/SVG/invoice icon.svg"></ion-img>
-        <!-- <ion-icon name="document"></ion-icon> -->
+        <ion-icon id="svg" src="../../../assets/SVG/Invoice.svg"></ion-icon>
       </ion-col>
       <ion-col size="2" id="invoiceDate" class="key">
         <ion-label><strong>Date:</strong></ion-label>

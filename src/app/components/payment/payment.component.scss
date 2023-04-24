@@ -109,8 +109,9 @@ ion-row.row {
 }
 
 div.row {
-    padding-left: 3rem;
+    padding-left: 2rem;
 }
+
 div.border_bottom {
     border-bottom: 2px solid;
     margin-left: 5%;
@@ -135,4 +136,8 @@ ion-row.row {
 #svg {
     width: 1.5rem;
     height: 2rem;
+}
+
+div.address {
+    margin-right: 10px;
 }

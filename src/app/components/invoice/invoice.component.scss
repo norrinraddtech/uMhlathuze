@@ -103,18 +103,41 @@ ion-row.row {
     color: white;
 }
 
+#invoiceDate {
+    // margin-left: 5px;
+}
+
+#invoice {
+    text-align: left;
+    justify-content: start;
+}
+
 #invoice > ion-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 div.row {
-    padding-left: 3rem;
-    border-top: 2px solid;
+    padding-left: 2rem;
+}
+
+div.border_bottom {
     border-bottom: 2px solid;
+    margin-left: 5%;
+    width: 90%;
 }
 
 .invoice_heading {
     font-size: 12px;
     font-weight: bold;
 }
+
+
+.invoiceIcon {
+    margin-right: 10px;
+    #svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+

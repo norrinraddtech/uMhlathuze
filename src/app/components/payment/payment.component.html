@@ -1,8 +1,7 @@
 <div class="invoice">
-  <ion-item  lines="none">
-    <div class="icon">
-      <ion-img id="svg" src="../../assets/SVG/house icon.svg"></ion-img>
-      <!-- <ion-icon name="home"></ion-icon> -->
+  <ion-item  lines="none" (click)="navigateBackToAccounts()">
+    <div class="icon address">
+      <ion-icon id="svg" src="../../../assets/SVG/House.svg"></ion-icon>
     </div>
     <div class="address_2">
       <strong>
@@ -36,13 +35,16 @@
   <div class="border_bottom"></div>
   <div class="row">
     <ion-label class="col-3 invoice_heading">Payments</ion-label>
-    <ion-label class="col-9 invoice_heading">Invoices</ion-label>
+    <ion-label class="col-9 invoice_heading" (click)="openInvoice()">Invoices</ion-label>
   </div>
   <div class="border_bottom"></div>
   <ion-item lines="none" *ngFor="let i of invoices">
     <ion-row class="row">
       <ion-col id="invoice" size="1" class="icon">
-        <ion-img id="svg" src="../../../assets/SVG/invoice icon.svg"></ion-img>
+        <ng-container [ngSwitch]="i.payment">
+          <ion-icon *ngSwitchCase="'Pending'" id="svg" src="../../../assets/SVG/Processing.svg"></ion-icon>
+          <ion-icon *ngSwitchCase="'Completed'" id="svg" src="../../../assets/SVG/Ticks.svg"></ion-icon>
+        </ng-container>
       </ion-col>
       <ion-col size="2" id="invoiceDate" class="key">
         <ion-label><strong>Date:</strong></ion-label>

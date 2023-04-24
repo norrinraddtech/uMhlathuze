@@ -7,7 +7,7 @@ import {  } from 'stream';
   styleUrls: ['./accounts.component.scss'],
 })
 export class AccountsComponent  implements OnInit {
-@Output('openInvoice') openInvoice: EventEmitter<any> = new EventEmitter();
+@Output('openPayment') openInvoice: EventEmitter<any> = new EventEmitter();
 
   invoices = [
     {invoiceId: 450000239843, date: '12/02/23', amount: 89238 },
