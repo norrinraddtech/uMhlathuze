@@ -31,6 +31,7 @@
 
 .icon {
     width: 7%;
+    // margin-right: 15px;
 }
 
 .accountNo {
@@ -113,7 +114,7 @@ div.row {
 }
 
 div.border_bottom {
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #707070;
     margin-left: 5%;
     width: 90%;
 }
@@ -141,3 +142,12 @@ ion-row.row {
 div.address {
     margin-right: 10px;
 }
+
+#amount.key{
+    text-align: right;
+}
+
+#amount.value{
+    text-align: right;
+}
+
