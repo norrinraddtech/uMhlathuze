@@ -22,6 +22,8 @@ export class HomePage implements OnInit {
   openBankCard = () => {
     this.showBankCard = true
     this.showHome = false
+    this.showPayment = false
+    this.invoices = false
   }
 
   backToAccounts = (event: any) => {
