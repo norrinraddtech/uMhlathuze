@@ -12,6 +12,7 @@ export class HomePage implements OnInit {
   showInvoicePDF = false;
   showPayment = false;
   showBankCard = false;
+  showAddCard = false;
   url = 'assets/images/bills-invoice.pdf'
   
   constructor() { }
@@ -28,6 +29,7 @@ export class HomePage implements OnInit {
 
   backToAccounts = (event: any) => {
     this.showPayment = !event
+    this.invoices = !event
     this.showHome = event
   }
 
@@ -63,5 +65,6 @@ export class HomePage implements OnInit {
     this.invoices = false;
     this.showInvoicePDF = true;
   }
+
 
 }
