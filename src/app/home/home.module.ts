@@ -12,6 +12,7 @@ import { InvoicesModule } from '../shared-modules/invoices.module';
 import { DisplayInvoiceModule } from '../shared-modules/display-invoice.module';
 import { PaymentModule } from '../shared-modules/payment.module';
 import { BankCardModule } from '../shared-modules/bank-card.module';
+import { AddCardModule } from '../shared-modules/add-card.module';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { BankCardModule } from '../shared-modules/bank-card.module';
     InvoicesModule,
     DisplayInvoiceModule,
     PaymentModule,
-    BankCardModule
+    BankCardModule,
+    AddCardModule
   ],
   declarations: [HomePage]
 })
