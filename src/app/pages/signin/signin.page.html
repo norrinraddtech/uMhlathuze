@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signin</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="d-flex justify-content-center">
+      <img class="logo" src="../../../assets/logo.png" />
+    </div>
+    <div class="container-fluid credentials">
+      <div class="email">
+        <!-- <ion-label class="form-label">ID Number/Org Ref</ion-label> -->
+        <ion-input formControlName="email" type="text" placeholder="Email" required></ion-input>
+      </div>
+      <ng-container *ngIf="errorControl.email.errors?.required && errorControl.email.touched">
+        <small class="text-danger">Email is required</small>
+      </ng-container>
+      <div class="password">
+        <!-- <ion-label class="form-label">Password</ion-label> -->
+        <ion-input formControlName="password" type="text" placeholder="Password" required>
+          <ion-icon class="showPassword" name="eye-sharp"></ion-icon>
+        </ion-input>
+      </div>
+      <ng-container *ngIf="errorControl.password.errors?.required && errorControl.password.touched">
+        <small class="text-danger">Password is required</small>
+      </ng-container>
+      <!-- <div class="passwordRecovery" (click)="forgotPassword()">
+        <a href="/password-recovery">Forgot Password?</a>
+      </div> -->
+      <div class="submit">
+        <ion-button type="submit" shape="round" [disabled]="!loginForm.valid">Login</ion-button>
+        <!-- <div class="signup">
+          <label>Don't have an account? </label>
+          <a [routerLink]="'/signup'">
+            <strong>Sign Up</strong>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </form>
 </ion-content>
