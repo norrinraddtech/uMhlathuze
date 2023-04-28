@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// import { Plugin } from '@capacitor/core'
+// const { SplashScreen } = Plugins;
+
 
 @Component({
   selector: 'app-root',
