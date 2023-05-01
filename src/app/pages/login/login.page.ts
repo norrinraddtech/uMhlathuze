@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms'
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms'
 export class LoginPage implements OnInit {
 
   loginForm: FormGroup
+  ss = false;
 
   constructor(private router: Router, 
     private localstorage: LocalstorageService,
@@ -22,9 +24,21 @@ export class LoginPage implements OnInit {
         email: ['', [Validators.required]],
         password: ['', [Validators.required]]
       })
+
+      this.splashScreen();
     }
 
   ngOnInit() {
+  }
+
+  splashScreen = () => {
+    debugger
+    setTimeout(() => {
+      this.ss = true
+    }, 10000)
+
+    this.ss = false
+
   }
 
   get errorControl() {

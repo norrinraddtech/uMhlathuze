@@ -12,25 +12,33 @@
         <small class="text-danger">ID Number or Account Number is required</small>
       </ng-container>
       <div class="password">
-        <ion-input formControlName="password" type="text" placeholder="Password" required>
-          <ion-icon class="showPassword" name="eye-sharp"></ion-icon>
-        </ion-input>
+        <ion-input id="viewPassword" formControlName="password" type="password" placeholder="Password" required>
+        </ion-input> 
+        <div class="showPassword" (click)="viewPassword();$event.stopPropagation();">
+          <ion-icon name="eye-sharp"></ion-icon>
+        </div>
       </div>
       <ng-container *ngIf="errorControl.password.errors?.required && errorControl.password.touched">
         <small class="text-danger">Password is required</small>
       </ng-container>
-      <!-- <div class="passwordRecovery" (click)="forgotPassword()">
-        <a href="/password-recovery">Forgot Password?</a>
-      </div> -->
       <div class="submit">
-        <ion-button type="submit" shape="round" [disabled]="!loginForm.valid">Login</ion-button>
-        <!-- <div class="signup">
-          <label>Don't have an account? </label>
-          <a [routerLink]="'/signup'">
-            <strong>Sign Up</strong>
-          </a>
-        </div> -->
+        <ion-button type="submit" shape="round">Login</ion-button>
       </div>
+      <ng-container *ngIf="!submitError" style="text-align: center;">
+        <small class="text-danger">Please enter all your credentials</small>
+      </ng-container>
     </div>
   </form>
+
+  <div class="ss" *ngIf="ss">
+    <ion-img class="splash" src="../../../assets/logo.png"></ion-img>
+    <div class="loader">
+      <div class="spinner">
+        <ion-spinner name="lines"></ion-spinner>
+      </div>
+      <div class="label">
+        <ion-label>Loading</ion-label>
+      </div>
+    </div>
+  </div>
 </ion-content>

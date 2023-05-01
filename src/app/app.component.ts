@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { Plugin } from '@capacitor/core'
 // const { SplashScreen } = Plugins;
+import { SplashScreen } from '@capacitor/splash-screen';
 
 
 @Component({
@@ -8,6 +9,22 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
-  constructor() {}
+export class AppComponent implements OnInit {
+  constructor() 
+  {
+    this.splashScreen();
+  }
+
+  async ngOnInit() {
+    await SplashScreen.show({
+      showDuration: 3000,
+      autoHide: false
+    });
+  }
+
+  splashScreen = () => {
+    setInterval(() => {
+      
+    }, 3000)
+  }
 }
