@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms'
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { Capacitor } from '@capacitor/core';
+import { LoadingController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-signin',
@@ -17,6 +18,7 @@ export class SigninPage implements OnInit {
   constructor(private router: Router, 
     // private localstorage: LocalstorageService,
     private fb: FormBuilder,
+    private plat: Platform,
     private loading: LoadingController) 
     { 
       this.loginForm = this.fb.group({
@@ -24,7 +26,9 @@ export class SigninPage implements OnInit {
         password: ['', [Validators.required]]
       })
 
-      this.splashScreen()
+      if (this.plat.is("ios") || this.plat.is("android")) {
+        this.splashScreen();
+      }
     }
   ngOnInit() {
   }

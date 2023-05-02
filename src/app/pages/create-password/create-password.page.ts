@@ -17,7 +17,7 @@ export class CreatePasswordPage implements OnInit {
   }
 
   save() {
-    this.router.navigateByUrl('tabs')
+    this.router.navigateByUrl('home')
   }
 
 }

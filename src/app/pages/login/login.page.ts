@@ -32,7 +32,6 @@ export class LoginPage implements OnInit {
   }
 
   splashScreen = () => {
-    debugger
     setTimeout(() => {
       this.ss = true
     }, 10000)

@@ -4,7 +4,7 @@ import { DisplayInvoiceComponent } from '../components/display-invoice/display-i
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { PdfViewerModule } from 'ng2-pdf-viewer'
-
+import { FileOpener } from '@ionic-native/file-opener/ngx'
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer'
     FormsModule,
     PdfViewerModule
   ],
+  providers: [FileOpener],
   exports: [DisplayInvoiceComponent]
 })
 export class DisplayInvoiceModule { }

@@ -44,15 +44,15 @@
       <div *ngIf="!showInvoicePDF" class="border_bottom" style="margin-bottom: 0.7rem;"></div>
       
       <app-accounts *ngIf="showHome" (openPayment)="openPayment($event)"></app-accounts>
-        
+      
       <app-invoice *ngIf="invoices" (openInvoicePDF)="openPDF()" (backToPayment)="backToPayment($event)" (backToAccounts)="backToAccounts($event)"></app-invoice> 
       <app-display-invoice *ngIf="showInvoicePDF" class="display_invoice" (closeInvoice)="close()"></app-display-invoice>
-     
+      
       <app-payment *ngIf="showPayment" (openInvoice)="openInvoice($event)" (backToAccounts)="backToAccounts($event)"></app-payment>
       <app-bank-card *ngIf="showBankCard"></app-bank-card>
       <app-add-card *ngIf="showAddCard"></app-add-card>
       <div class="bottom" *ngIf="!showInvoicePDF">
-
+        
         <div *ngIf="showAddCard" class="add_card_page">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="24" viewBox="0 0 19 24">
             <defs>
@@ -63,7 +63,7 @@
             <rect id="Image_25" data-name="Image 25" width="19" height="24" fill="url(#pattern)"/>
           </svg>          
         </div>
-
+        
         <div *ngIf="showBankCard" class="paygate">
           <ion-row class="paygate">
             <ion-col id="invoice" size="2" class="icon">
