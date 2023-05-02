@@ -53,8 +53,11 @@ export class SigninPage implements OnInit {
   }
 
   forgotPassword = () => {
-
-    this.router.navigateByUrl('');
+    try {
+      this.router.navigateByUrl('password-recovery');
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   submit = async () => {

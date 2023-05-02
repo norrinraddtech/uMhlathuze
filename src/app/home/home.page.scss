@@ -1,5 +1,6 @@
 .home {
     padding: 0;
+    overflow-y: unset;
 }
 
 .header {
@@ -270,10 +271,12 @@ ion-col.paygate {
 //display invoice
 .display_invoice {
     position: absolute;
-    top: 22%;
+    top: 26%;
     left: 0;
     width: 100%;
-    z-index: 1;
+    height: 30rem;
+    z-index: -1;
+    overflow-y: scroll;
 }
 
 div.row {

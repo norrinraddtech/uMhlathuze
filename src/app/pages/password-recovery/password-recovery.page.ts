@@ -9,11 +9,8 @@ import { Platform } from '@ionic/angular';
 })
 export class PasswordRecoveryPage implements OnInit {
 
-  constructor(private router: Router, private platform: Platform) 
+  constructor(private router: Router) 
   { 
-    this.platform.backButton.subscribe(() => {
-      console.log('did enter')
-    })
   }
 
   ngOnInit() {

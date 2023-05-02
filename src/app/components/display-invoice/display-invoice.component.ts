@@ -56,8 +56,8 @@ url = 'assets/images/bills-invoice.pdf'
         //   path: name
         // })
 
-        // this.fileOpener.open(path, 'application/pdf')
-        // .then(() => console.log('file opened'))
+        this.fileOpener.open(path, 'application/pdf')
+        .then(() => console.log('file opened'))
         
       } catch (error) {
 
