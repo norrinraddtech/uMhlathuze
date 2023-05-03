@@ -16,7 +16,9 @@ url = 'assets/images/bills-invoice.pdf'
     private fileOpener: FileOpener,
     private message: MessageService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.download()
+  }
 
   close = () => {
     this.closeInvoice.emit(true)
@@ -45,7 +47,7 @@ url = 'assets/images/bills-invoice.pdf'
           directory: Directory.Documents
         });
         
-        (await this.message.presentToast('PDF Downloaded Successfully!', 'success')).present()
+        // (await this.message.presentToast('PDF Downloaded Successfully!', 'success')).present()
 
         const path = savedFile.uri
         
