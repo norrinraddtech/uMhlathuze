@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-payment',
-  templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.scss'],
+  selector: 'app-process-payment',
+  templateUrl: './process-payment.component.html',
+  styleUrls: ['./process-payment.component.scss'],
 })
-export class PaymentComponent  implements OnInit {
+export class ProcessPaymentComponent  implements OnInit {
   @Input('active') active: boolean = true;
   @Output('openInvoice') open: EventEmitter<boolean> = new EventEmitter()
   @Output('backToAccounts') backToAccounts: EventEmitter<boolean> = new EventEmitter();
@@ -14,11 +14,11 @@ export class PaymentComponent  implements OnInit {
     { status: 1, payment: 'Completed', date: '12.03.2023', amount: 1234.78 },
     { status: 1, payment: 'Completed', date: '12.04.2023', amount: 89238.78 },
   ];
-  
+
   constructor() { }
-  
-  ngOnInit() 
-  {
+
+  ngOnInit() {
+
     let nativeLabel = document.getElementById('button_label')
     let navtiveValue = document.getElementById('button_label')
     if (this.active && nativeLabel && navtiveValue) {
@@ -26,7 +26,7 @@ export class PaymentComponent  implements OnInit {
       navtiveValue.style.color = 'white'
     }
   }
-  
+
   openInvoice = () => {
     this.open.emit(true);
   }
@@ -34,5 +34,4 @@ export class PaymentComponent  implements OnInit {
   navigateBackToAccounts = () => {
     this.backToAccounts.emit(true)
   }
-  
 }

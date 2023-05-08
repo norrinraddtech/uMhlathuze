@@ -1,7 +1,6 @@
 <div class="invoice">
   <ion-item  lines="none" (click)="navigateBackToAccounts()">
     <div class="icon invoiceIcon">
-      <!-- <ion-icon name="home"></ion-icon> -->
       <ion-icon id="svg" src="../../../assets/SVG/House.svg"></ion-icon>
     </div>
     <div class="address_2">
@@ -34,10 +33,21 @@
     </div>
   </ion-item>
   <div class="border_bottom"></div>
-  <div class="row">
-    <ion-label class="col-3 invoice_heading" (click)="navigateBackToPayments()">Payments</ion-label>
-    <ion-label class="col-9 invoice_heading">Invoices</ion-label>
+  <div class="nav_labels">
+    <div class="label">
+      <ion-label id="button_value" class="col-3 invoice_heading" (click)="navigateBackToPayments()">Payments</ion-label>
+    </div>
+    <div id="button_label" class="label">
+      <ion-label class="col-9 invoice_heading">Invoices</ion-label>
+    </div>
+    <div class="label">
+      <ion-label class="col-3 invoice_heading">Electricity</ion-label>
+    </div>
+    <div class="label">
+      <ion-label class="col-9 invoice_heading">Water</ion-label>
+    </div>
   </div>
+  
   <div class="border_bottom"></div>
   <ion-item class="item" lines="none" *ngFor="let i of invoices" (click)="open()">
     <ion-row class="row">

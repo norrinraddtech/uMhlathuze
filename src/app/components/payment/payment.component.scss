@@ -40,7 +40,7 @@
         text-align: left;
         justify-content: start;
     }
-
+    
     .value {
         text-align: end;
         justify-content: end;
@@ -54,7 +54,7 @@
         justify-content: start;
         width: 6rem;
     }
-
+    
     .value {
         text-align: end;
         justify-content: end;
@@ -66,11 +66,16 @@ ion-row.row {
     padding-left: 1rem;
 }
 
+#invoice {
+    width: 30px;
+}
+
 #invoiceDate.key {
     justify-content: left;
     text-align: start;
+    width: 20%;
     --margin: 0;
-
+    
     ion-label {
         width: 3rem;
     }
@@ -79,7 +84,8 @@ ion-row.row {
 #invoiceDate.value {
     justify-content: left;
     text-align: start;
-
+    width: 20%;
+    
     ion-label {
         width: 5rem;
     }
@@ -88,13 +94,15 @@ ion-row.row {
 #amount.key {
     justify-content: left;
     text-align: start;
+    width: 20%;
     ion-label {
         width: 3rem;
     }
 }
 
 #amount.value {
-    
+    width: 30%;
+    text-align: right;
     ion-label {
         font-weight: normal;
     }
@@ -109,19 +117,28 @@ ion-row.row {
     height: 25px;
 }
 
-div.row {
-    padding-left: 2rem;
-}
 
 div.border_bottom {
     border-bottom: 2px solid #707070;
     margin-left: 5%;
     width: 90%;
+    margin-bottom: 5px;
 }
 
-.invoice_heading {
+.label {
     font-size: 12px;
     font-weight: bold;
+    border: 1.5px solid black;
+    width: 79px;
+    border-radius: 13px;
+    height: 22px;
+    margin-right: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+    .invoice_heading {
+        width: 73px;
+    }
 }
 
 ion-row.row {
@@ -150,4 +167,82 @@ div.address {
 #amount.value{
     text-align: right;
 }
+
+.status {
+    margin: 15px 25px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    height: 74px;
+    
+    .status_row {
+        display: inline-flex;
+        padding-left: 18px;
+        .key {
+            display: block;
+            width: 5rem;
+        }
+        .value {
+            display: block;
+            width: 5rem;
+        }
+        .amount_key {
+            text-align: left;
+        }
+        .amount_value {
+            text-align: left;
+        }
+    }
+}
+
+ion-label.key {
+    font-weight: bold;
+}
+
+div.status_bar {
+    display: inline-flex;
+    padding: 0 18px;
+    .bar {
+        border-bottom: 1px solid black;
+        height: 8px;
+        width: 4.85rem;
+        padding-top: 5px;
+    }
+}
+
+ion-label.status_bar_label {
+    font-size: 8px;
+}
+
+.history {
+    margin: 15px 25px 0;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding-left: -20px;
+}
+
+
+ion-row.row {
+    // background: purple;
+    width: 30rem;
+}
+
+ion-item.history_item {
+    padding: 0;
+}
+
+.nav_labels {
+    width: 100%;
+    display: inline-flex;
+    margin-left: 1rem;
+}
+
+ion-icon#svg {
+    width: 17px;
+    height: 17px;
+}
+
+.icon.address {
+    margin-bottom: 20px;
+}
+
 

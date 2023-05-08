@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
   showHome = true;
   showInvoicePDF = false;
   showPayment = false;
+  showProcessPayment = false;
   showBankCard = false;
   showAddCard = false;
   url = 'assets/images/bills-invoice.pdf'
@@ -23,6 +24,8 @@ export class HomePage implements OnInit {
     private fileOpener: FileOpener,) { }
 
   ngOnInit() {
+    // this.closeAll(false)
+    // this.showProcessPayment = true
   }
 
   closeAll = (event: boolean) => {
@@ -32,6 +35,7 @@ export class HomePage implements OnInit {
     this.showBankCard = event
     this.showPayment = event
     this.showInvoicePDF = event
+    this.showProcessPayment = event;
   }
 
   openAddCard = () => {
@@ -48,20 +52,16 @@ export class HomePage implements OnInit {
   }
 
   backToAccounts = (event: any) => {
-    // this.showPayment = !event
-    // this.invoices = !event
     this.closeAll(!event)
     this.showHome = event
   }
 
   backToPayment = (event: any) => {
-    // this.invoices = !event
     this.closeAll(!event)
     this.showPayment = event
   }
 
   openInvoice = (event: any) => {
-    // this.showPayment = !event
     this.closeAll(!event)
     this.invoices = event
   }
@@ -69,29 +69,27 @@ export class HomePage implements OnInit {
   openPayment = (event: any) => {
     this.closeAll(!event)
     this.showPayment = event;
-    // this.showHome = !event
   }
 
   openHome = () => {
     this.closeAll(false)
     this.showHome = true;
-    // this.showPayment = false;
-    // this.showBankCard = false;
-    // this.invoices = false
   }
 
   close = () => {
     this.closeAll(false)
     this.invoices = true;
-    // this.showHome = false;
-    // this.showInvoicePDF = false;
   }
 
   openPDF = () => {
-    // this.invoices = false;
     this.closeAll(false)
     this.invoices = true;
     this.download()
+  }
+
+  openProcessPayment = () => {
+    this.closeAll(false)
+    this.showProcessPayment = true
   }
     
   download = () => {

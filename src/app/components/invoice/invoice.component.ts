@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-invoice',
@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class InvoiceComponent  implements OnInit {
 
+  @Input('active') active: boolean = true;
   @Output('openInvoicePDF') openInvoicePDF: EventEmitter<boolean> = new EventEmitter();
   @Output('backToPayment') backToPayment: EventEmitter<boolean> = new EventEmitter();
   @Output('backToAccounts') backToAccounts: EventEmitter<boolean> = new EventEmitter();
@@ -16,7 +17,14 @@ export class InvoiceComponent  implements OnInit {
   ];
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    let nativeLabel = document.getElementById('button_label')
+    let navtiveValue = document.getElementById('button_label')
+    if (this.active && nativeLabel && navtiveValue) {
+      nativeLabel.style.background = 'black'
+      navtiveValue.style.color = 'white'
+    }
+  }
 
   open = () => {
     this.openInvoicePDF.emit(true)
