@@ -1,5 +1,66 @@
 
-.add_card {
+
+
+*ion-label {
+    font-size: 12px;
+}
+
+.card_details {
+    margin: 1px 25px 0;
+    padding: 10px 15px 10px 10px;
+    border: 1.5px solid #707070;
+    height: 183px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.visa_icon {
+    width: 28px;
+    height: 19px;
+    fill: #1919c0;
+}
+
+ion-col.underline {
+    div {
+        border-bottom: 1.5px solid #707070;
+    }
+}
+
+.card_number {
     text-align: center;
-    margin-top: 2rem;
+}
+
+.card_expiry {
+    ion-label {
+        margin-left: 5px;
+    }
+    div {
+        width: 55%;
+        border-bottom: 1.5px solid #707070;
+    }
+}
+
+.card_cvv {
+    text-align: center;
+}
+
+.key {
+    font-weight: bold;
+}
+
+.save {
+    text-align: center;
+    margin-top: 20px;
+    ion-button {
+        height: 28px;
+        width: 107px;
+        --background: #030303;
+        font-weight: bold;
+        text-align: right;
+        svg {
+            width: 17px;
+            height: 17px;
+            fill: white;
+        }
+    }
 }

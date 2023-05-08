@@ -37,8 +37,8 @@ ion-label.customer-name {
 
 
 .logo {
-    width: 66px;
-    height: 65px;
+    width: 76px;
+    height: 75px;
 }
 
 .block, .address, .address-value {
@@ -398,7 +398,27 @@ ion-row.paygate {
 //Add Card
 .add_card_page {
     text-align: right;
-    margin: 0 1.5rem 1rem 0;
+    // margin: 0 1.5rem 1rem 0;
+    height: 85px;
+    width: 100%;
+    display: inline-flex;
+    .scan_add_card {
+        width: 50%;
+        text-align: left;
+        margin: 40px 0 0 25px;
+    }
+    .paygate_add_card {
+        // text-align: right;
+        width: 50%;
+        margin-top: 5px;
+        padding: 0 30px 0 55px;
+
+        svg.lockIcon {
+            position: absolute;
+            bottom: 75px;
+            right: 30px;
+        }
+    }
 }
 
 ion-label.currentDateTime {
