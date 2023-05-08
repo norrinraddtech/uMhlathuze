@@ -5,7 +5,7 @@
 
 
 .header {
-    margin: 32px 1rem 15px;
+    margin: 42px 5px 15px;
     ion-item {
         border-bottom: 0;
     }
@@ -37,8 +37,8 @@ ion-label.customer-name {
 
 
 .logo {
-    width: 46px;
-    height: 45px;
+    width: 66px;
+    height: 65px;
 }
 
 .block, .address, .address-value {
@@ -390,7 +390,7 @@ ion-row.paygate {
 }
 
 .border_bottom {
-    margin-left: 5%;
+    margin: 0 22px 0;
     width: 90%;
     border-bottom: 2px solid #707070;
 }

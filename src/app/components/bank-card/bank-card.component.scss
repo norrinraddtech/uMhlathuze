@@ -7,10 +7,12 @@
 
 .card_details {
     text-align: left;
+    width: 80%;
+    margin-left: 10px;
     ion-label {
         display: block;
         font-weight: bold;
-        width: 8rem;
+        width: 198px;
     }
 }
 
@@ -27,5 +29,33 @@ ion-icon.delete {
     width: 2rem;
     height: 2rem;
 }
+
+.icon {
+    width: 30px;
+    ion-icon {
+        width: 28px;
+        height: 28px;
+        margin: 0 20px 20px 0;
+    }
+}
+
+.expiry {
+    display: block;
+    width: 78px;
+    ion-label {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    ion-label.empty {
+        color: white;
+    }
+}
+
+.card {
+    width: 90%S;
+    height: 66px;
+    margin: 10px 25px 10px;
+}   
 
 

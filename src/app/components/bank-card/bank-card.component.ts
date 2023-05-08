@@ -19,6 +19,18 @@ export class BankCardComponent  implements OnInit {
       holder: 'DP Naidoo',
       cardNumber: '4790 XXXX XXXX XX19',
       default: false
+    },
+    {
+      type: 'Credit Card',
+      holder: 'DP Naidoo',
+      cardNumber: '4790 XXXX XXXX XX19',
+      default: false
+    },
+    {
+      type: 'Credit Card',
+      holder: 'DP Naidoo',
+      cardNumber: '4790 XXXX XXXX XX19',
+      default: false
     }
   ]
   constructor() { }

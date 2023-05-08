@@ -24,8 +24,8 @@ export class HomePage implements OnInit {
     private fileOpener: FileOpener,) { }
 
   ngOnInit() {
-    // this.closeAll(false)
-    // this.showProcessPayment = true
+    this.closeAll(false)
+    this.showBankCard = true
   }
 
   closeAll = (event: boolean) => {
