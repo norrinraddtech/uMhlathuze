@@ -89,30 +89,30 @@
   </div>
   
   <div class="history">
-    <ion-item class="history_item" lines="none" *ngFor="let i of invoices">
-      <div id="invoice" size="1" class="icon">
+    <ion-row class="history_item" lines="none" *ngFor="let i of invoices">
+      <ion-col size="2" id="invoice" size="1" class="invoice icon">
         <ng-container [ngSwitch]="i.payment">
           <ion-icon style="width: 17px; height: 17px;" *ngSwitchCase="'Pending'" id="svg" src="../../../assets/SVG/Processing.svg"></ion-icon>
           <ion-icon style="width: 17px; height: 17px;" *ngSwitchCase="'Completed'" id="svg" src="../../../assets/SVG/Ticks.svg"></ion-icon>
         </ng-container>
-      </div>
-      <div id="invoiceDate" class="key">
-        <ion-label><strong>Date:</strong></ion-label>
-        <ion-label><strong>Payment:</strong></ion-label>
-      </div>
-      <div id="invoiceDate" class="value">
+      </ion-col>
+     <ion-col size="2" id="invoiceDate" class="invoice key">
+        <ion-label>Date:</ion-label>
+        <ion-label>Payment:</ion-label>
+      </ion-col>
+      <ion-col size="3" id="invoiceDate" class="value">
         <ion-label>{{ i.date }}</ion-label>
         <ion-label>{{ i.payment }}</ion-label>
-      </div>
-      <div id="amount" class="key">
+      </ion-col>
+       <ion-col size="2" id="amount" class="key">
         <ion-label class="empty">amount</ion-label>
         <ion-label><strong>Amount</strong></ion-label>
-      </div>
-      <div id="amount" class="value">
+      </ion-col>
+      <ion-col size="4" id="amount" class="value">
         <ion-label class="empty">amount</ion-label>
         <ion-label type="number">{{ i.amount | currency: 'R' }}</ion-label>
-      </div>
-    </ion-item>
+      </ion-col> 
+    </ion-row>
   </div>
 </div>
 

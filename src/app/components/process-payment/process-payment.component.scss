@@ -29,11 +29,6 @@
     width: 50%;
 }
 
-.icon {
-    width: 7%;
-    // margin-right: 15px;
-}
-
 .accountNo {
     
     .key {
@@ -66,9 +61,6 @@ ion-row.row {
     padding-left: 1rem;
 }
 
-#invoice {
-    width: 30px;
-}
 
 #invoiceDate.key {
     justify-content: left;
@@ -221,12 +213,6 @@ ion-label.status_bar_label {
     font-size: 8px;
 }
 
-.history {
-    margin: 15px 25px 15rem;
-    border: 1.5px solid black;
-    border-radius: 5px;
-    padding-left: -20px;
-}
 
 
 ion-row.row {
@@ -234,9 +220,6 @@ ion-row.row {
     width: 30rem;
 }
 
-ion-item.history_item {
-    padding: 0;
-}
 
 .nav_labels {
     width: 100%;
@@ -247,6 +230,31 @@ ion-item.history_item {
 ion-icon#svg {
     width: 17px;
     height: 17px;
+}
+
+.history {
+    border: 1.5px solid #707070;
+    border-radius: 5px;
+    margin: 10px 25px 0;
+    
+    .history_item {
+
+        #invoiceDate.key {
+            font-weight: bold;
+        }
+
+        #invoiceDate.key, #invoiceDate.value, #amount.key, #amount.value {
+            ion-label {
+                display: block;
+            }
+        }
+
+        #amount.value {
+            text-align: right;
+            width: 10rem;
+        }
+
+    }
 }
 
 
