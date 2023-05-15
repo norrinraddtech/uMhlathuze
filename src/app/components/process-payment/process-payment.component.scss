@@ -123,7 +123,7 @@ div.border_bottom {
     border: 1.5px solid black;
     width: 79px;
     border-radius: 13px;
-    height: 22px;
+    height: 24px;
     margin-right: 10px;
     text-align: center;
     
@@ -167,29 +167,22 @@ div.address {
     height: 80px;
     
     .status_row {
-        display: inline-flex;
-        padding-left: 8px;
+        padding: 0 1px 0 10px;
         .key {
             font-size: 10px;
             display: block;
-            width: 60px;
-            margin-left: 3px;
         }
         .value {
             font-size: 10px;
             display: block;
-            width: 5rem;
         }
         .amount_key {
             font-size: 10px;
             text-align: center;
-            width: 4.9rem;
-            margin-left: 10px;
         }
         .amount_value {
             font-size: 10px;
             text-align: right;
-            padding-right: 10px;
         }
     }
 }
@@ -200,17 +193,31 @@ ion-label.key {
 
 div.status_bar {
     display: inline-flex;
-    padding: 0 13px;
+    padding: 0 1px 0 13px;
+    margin-bottom: 10px;
+    margin-top: -15px;
+    width: 100%;
+
+    ion-icon {
+        width: 50px;
+        height: 50px;
+    }
     .bar {
         border-bottom: 1px solid black;
-        height: 8px;
-        width: 5.1rem;
-        padding-top: 5px;
+        height: 25px;
+        // width: 90px;
+        width: 100%;
+        // padding-top: 5px;
+        padding: 0 1px 0 10px;
+    }
+
+    .bar > ion-label {
     }
 }
 
 ion-label.status_bar_label {
     font-size: 8px;
+    margin-top: 30px;
 }
 
 
@@ -222,9 +229,9 @@ ion-row.row {
 
 
 .nav_labels {
-    width: 100%;
+    // width: 100%;
     display: inline-flex;
-    margin-left: 15.6px;
+    margin: 0 6.66%;
 }
 
 ion-icon#svg {
@@ -235,7 +242,7 @@ ion-icon#svg {
 .history {
     border: 1.5px solid #707070;
     border-radius: 5px;
-    margin: 10px 25px 0;
+    margin: 10px 6.66% 0;
     
     .history_item {
 
@@ -249,6 +256,10 @@ ion-icon#svg {
             }
         }
 
+        #amount.key {
+            text-align: right;
+            padding-left: 15px;
+        }
         #amount.value {
             text-align: right;
             width: 10rem;

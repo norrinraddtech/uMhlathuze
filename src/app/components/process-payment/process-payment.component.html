@@ -49,40 +49,46 @@
   </div>
   <div class="border_bottom"></div>
   <div class="status">
-    <div class="status_row">
-      <div class="key">
+    <ion-row class="status_row">
+      <ion-col size="3" class="key">
         <ion-label class="key">Date:</ion-label>
         <ion-label class="key">Payment:</ion-label>
-      </div>
-      <div class="value">
+      </ion-col>
+      <ion-col size="3" class="value">
         <ion-label class="value">12.04.2023</ion-label>
         <ion-label class="value">In Progress</ion-label>
-      </div>
-      <div class="amount_key">
+      </ion-col>
+      <ion-col size="3" class="amount_key">
         <ion-label style="color: #ffffff;" class="key">Amount</ion-label>
         <ion-label class="key">Amount</ion-label>
-      </div>
-      <div class="amount_value">
+      </ion-col>
+      <ion-col size="3" class="amount_value">
         <ion-label style="color: #ffffff;" class="key">Amount</ion-label>
         <ion-label class="value">R1,234.56</ion-label>
-      </div>
-    </div>
+      </ion-col>
+    </ion-row>
     
     <div class="status_bar">
       <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
       <div class="bar">
-        <ion-label style="margin-left: -15px;" class="status_bar_label">Requested</ion-label>
+        <div style="padding-top: 25px;">
+          <ion-label style="margin-left: -25px;" class="status_bar_label">Requested</ion-label>
+        </div>
       </div>
       <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
       <div class="bar">
-        <ion-label style="margin-left: -30px;" class="status_bar_label">Approved</ion-label>
+        <div style="padding-top: 25px;">
+          <ion-label style="margin-left: -30px;" class="status_bar_label">Approved</ion-label>
+        </div>
       </div>
       <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
       <div class="bar" style=" border-bottom: 1px solid rgba(199, 197, 197, 0.5)">
-        <ion-label style="margin-left: -30px;" class="status_bar_label">Processing</ion-label>
+        <div style="padding-top: 25px;">
+          <ion-label style="margin-left: -30px;" class="status_bar_label">Processing</ion-label>
+        </div>
       </div>
       <ion-icon style="opacity: 0.3;" class="success" name="checkmark-circle" color="success"></ion-icon>
-      <div style="padding-top: 5px;">
+      <div style="padding-top: 25px;">
         <ion-label style="margin-left: -45px;" class="status_bar_label">Completed</ion-label>
       </div>
     </div>
@@ -96,7 +102,7 @@
           <ion-icon style="width: 17px; height: 17px;" *ngSwitchCase="'Completed'" id="svg" src="../../../assets/SVG/Ticks.svg"></ion-icon>
         </ng-container>
       </ion-col>
-     <ion-col size="2" id="invoiceDate" class="invoice key">
+      <ion-col size="2" id="invoiceDate" class="invoice key">
         <ion-label>Date:</ion-label>
         <ion-label>Payment:</ion-label>
       </ion-col>
@@ -104,7 +110,7 @@
         <ion-label>{{ i.date }}</ion-label>
         <ion-label>{{ i.payment }}</ion-label>
       </ion-col>
-       <ion-col size="2" id="amount" class="key">
+      <ion-col size="2" id="amount" class="key">
         <ion-label class="empty">amount</ion-label>
         <ion-label><strong>Amount</strong></ion-label>
       </ion-col>
