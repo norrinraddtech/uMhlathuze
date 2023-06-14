@@ -19,13 +19,15 @@ export class HomePage implements OnInit {
   showBankCard = false;
   showAddCard = false;
   url = 'assets/images/bills-invoice.pdf'
+  collapsePartnerDetails = true;
+  collapseIcon = 'open'
   
   constructor(private http: HttpClient, 
     private fileOpener: FileOpener,) { }
 
   ngOnInit() {
-    // this.closeAll(false)
-    // this.showProcessPayment = true
+    this.closeAll(false)
+    this.showPayment = true
   }
 
   closeAll = (event: boolean) => {
@@ -44,8 +46,8 @@ export class HomePage implements OnInit {
   }
 
   openBankCard = () => {
-    this.closeAll(false)
-    this.showBankCard = true
+    // this.closeAll(false)
+    // this.showBankCard = true
     // this.showHome = false
     // this.showPayment = false
     // this.invoices = false
@@ -139,6 +141,15 @@ export class HomePage implements OnInit {
     };
     reader.readAsDataURL(blob)
   })
+
+  collapse = () => {
+    this.collapsePartnerDetails = !this.collapsePartnerDetails
+    if (this.collapsePartnerDetails) {
+      this.collapseIcon = 'open'
+    } else {
+      this.collapseIcon = 'close'
+    }
+  }
 
 
 }

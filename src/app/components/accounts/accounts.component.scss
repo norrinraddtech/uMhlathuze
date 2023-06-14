@@ -18,7 +18,7 @@
 }
 
 .account-balance > .key, .arrears > .key, .accountNo > .key {
-    font-weight: bold;
+    // font-weight: bold;
     padding-right: 5px;
     text-align: end;
     justify-content: end;
@@ -67,6 +67,15 @@
 #svg {
     width: 1.5rem;
     height: 2rem;
+}
+
+ion-item {
+    margin: 10px 0;
+    border-radius: 7px;
+    --inner-padding-bottom: 0;
+    --inner-padding-end: 5px;
+    --inner-padding-start: 0;
+    --inner-padding-top: 0;
 }
 
 
