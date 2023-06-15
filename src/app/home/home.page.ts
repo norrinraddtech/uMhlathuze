@@ -27,7 +27,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.closeAll(false)
-    this.showPayment = true
+    this.showProcessPayment = true
   }
 
   closeAll = (event: boolean) => {

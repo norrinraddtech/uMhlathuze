@@ -56,6 +56,37 @@
     }
 }
 
+.payment_block {
+    background: #FFFFFF;
+    border-radius: 7px;
+
+    .choose_account {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0 2%;
+
+        .card_number {
+            width: 90%;
+            display: inline-flex;
+        }
+        .select_icon {
+            width: 10%;
+            display: inline-flex;
+            // margin-top: 5px;
+        }
+    }
+
+    .amount_input {
+        width: 40%;
+        display: inline-flex;
+    }
+    button {
+        width: 26%;
+        display: inline-flex;
+        margin: 0 2%;
+    }
+}
+
 //invoices
 ion-row.row {
     padding-left: 1rem;
@@ -112,9 +143,9 @@ ion-row.row {
 
 div.border_bottom {
     border-bottom: 2px solid #707070;
-    margin-left: 5%;
-    width: 90%;
-    margin-bottom: 5px;
+    // margin-left: 5%;
+    // width: 90%;
+    // margin-bottom: 5px;
 }
 
 .label {
@@ -160,32 +191,32 @@ div.address {
     text-align: right;
 }
 
-.status {
-    margin: 15px 25px;
-    border: 1.5px solid black;
-    border-radius: 5px;
-    height: 80px;
+// .status {
+//     margin: 15px 25px;
+//     // border: 1.5px solid black;
+//     // border-radius: 5px;
+//     height: 80px;
     
-    .status_row {
-        padding: 0 1px 0 10px;
-        .key {
-            font-size: 10px;
-            display: block;
-        }
-        .value {
-            font-size: 10px;
-            display: block;
-        }
-        .amount_key {
-            font-size: 10px;
-            text-align: center;
-        }
-        .amount_value {
-            font-size: 10px;
-            text-align: right;
-        }
-    }
-}
+//     .status_row {
+//         padding: 0 1px 0 10px;
+//         .key {
+//             font-size: 10px;
+//             display: block;
+//         }
+//         .value {
+//             font-size: 10px;
+//             display: block;
+//         }
+//         .amount_key {
+//             font-size: 10px;
+//             text-align: center;
+//         }
+//         .amount_value {
+//             font-size: 10px;
+//             text-align: right;
+//         }
+//     }
+// }
 
 ion-label.key {
     font-weight: bold;
@@ -193,22 +224,22 @@ ion-label.key {
 
 div.status_bar {
     display: inline-flex;
-    padding: 0 1px 0 13px;
-    margin-bottom: 10px;
+    padding: 0 1px 0 1px;
+    // margin-bottom: 10px;
     margin-top: -15px;
     width: 100%;
 
     ion-icon {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
     .bar {
-        border-bottom: 1px solid black;
-        height: 25px;
+        border-bottom: 3px solid black;
+        height: 35px;
         // width: 90px;
         width: 100%;
         // padding-top: 5px;
-        padding: 0 1px 0 10px;
+        padding: 0 0px 0 10px;
     }
 
     .bar > ion-label {
@@ -217,7 +248,7 @@ div.status_bar {
 
 ion-label.status_bar_label {
     font-size: 8px;
-    margin-top: 30px;
+    // margin-top: 40px;
 }
 
 
@@ -231,7 +262,7 @@ ion-row.row {
 .nav_labels {
     // width: 100%;
     display: inline-flex;
-    margin: 0 6.66%;
+    // margin: 0 6.66%;
 }
 
 ion-icon#svg {
@@ -265,6 +296,76 @@ ion-icon#svg {
             width: 10rem;
         }
 
+    }
+}
+
+.payment_status, .hist_payments {
+    padding: 0 5px;
+}
+
+.payment_status {
+    background: #FFFFFF;
+    border-radius: 7px;
+    margin: 10px 0;
+    .heading {
+        width: 100%;
+    }
+    .date_label {
+        margin-left: 10%;
+    }
+    .date_label, .status_label {
+        width: 25%;
+        display: inline-flex;
+    } 
+    .amount_label {
+        width: 40%;
+        display: inline-flex;
+        justify-content: end;
+    }
+    .filter_icon {
+        width: 10%;
+        display: inline-flex;
+        justify-content: right;
+
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+    .date, .status {
+        width: 25%;
+        display: inline-flex;
+    }
+    .amount {
+        width: 40%;
+        display: inline-flex;
+        justify-content: end;
+    }
+}
+
+.hist_payments {
+    border-top: 1px solid #d1d1d1;
+    padding: 10px 5px;
+    .hist_status_icon {
+        width: 5%;
+        display: inline-flex;
+    }
+    .hist_payment_date, .hist_payment_status {
+        width: 25%;
+        display: inline-flex;
+    }
+    .hist_payment_amount {
+        width: 45%;
+        display: inline-flex;
+        justify-content: end;
+    }
+
+    .hist_payment_status {
+        svg {
+            width: 12px;
+            height: 12px;
+            margin-left: 5px;
+        }
     }
 }
 

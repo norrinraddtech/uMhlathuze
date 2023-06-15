@@ -1,5 +1,5 @@
 <div class="invoice">
-  <ion-item  lines="none" (click)="navigateBackToAccounts()">
+  <!-- <ion-item  lines="none" (click)="navigateBackToAccounts()">
     <div class="icon address">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31" viewBox="0 0 31 31"> <image id="Image_5" data-name="Image 5" width="31" height="31" xlink:href="data:image/png;base64,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"/></svg>
     </div>
@@ -31,8 +31,8 @@
         </div>
       </div>
     </div>
-  </ion-item>
-  <div class="border_bottom"></div>
+  </ion-item> -->
+  <!-- <div class="border_bottom"></div> -->
   <div class="nav_labels">
     <div id="button_label" class="label">
       <ion-label id="button_value" class="col-3 invoice_heading">Payments</ion-label>
@@ -40,15 +40,123 @@
     <div class="label">
       <ion-label class="col-9 invoice_heading" (click)="openInvoice()">Invoices</ion-label>
     </div>
-    <div class="label">
+    <!-- <div class="label">
       <ion-label class="col-3 invoice_heading">Electricity</ion-label>
     </div>
     <div class="label">
       <ion-label class="col-9 invoice_heading" (click)="openInvoice()">Water</ion-label>
+    </div> -->
+  </div>
+  <!-- <div class="border_bottom"></div> -->
+  
+  <div class="payment_block">
+    <ion-label>Make a Payment</ion-label>
+    <div class="choose_account">
+      <div class="card_number">
+        <ion-label>Visa ****7284 Expires 04/25</ion-label>
+      </div>
+      <div class="select_icon">
+        <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="amount_input">
+      <ion-input type="text" position="floating" name="Amount" value="5,284.87"></ion-input>
+    </div>
+    <button class="btn btn-success" type="button">Pay Now</button>
+    <button class="btn btn-dark" type="button">Add Card</button>
+  </div>
+  
+  <div class="payment_status">
+    <div class="heading">
+      <ion-label>Payment History</ion-label>
+    </div>
+    <div class="date_label">
+      <ion-label><strong>Date</strong></ion-label>
+    </div>
+    <div class="status_label">
+      <ion-label>Status</ion-label>
+    </div>
+    <div class="amount_label">
+      <ion-label>Amount</ion-label>
+    </div>
+    <div class="filter_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+        <path id="pending_FILL0_wght400_GRAD0_opsz48" d="M85.118-867.625a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.335,1.335,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,85.118-867.625Zm5.885,0a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.335,1.335,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,91-867.625Zm5.857,0a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.334,1.334,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,96.861-867.625ZM91.007-858a10.648,10.648,0,0,1-4.276-.866,11.178,11.178,0,0,1-3.5-2.365,11.171,11.171,0,0,1-2.365-3.5A10.668,10.668,0,0,1,80-869.014a10.668,10.668,0,0,1,.866-4.281,11.007,11.007,0,0,1,2.365-3.488,11.291,11.291,0,0,1,3.5-2.351A10.667,10.667,0,0,1,91.014-880a10.667,10.667,0,0,1,4.281.866,11.123,11.123,0,0,1,3.488,2.351,11.108,11.108,0,0,1,2.351,3.492,10.693,10.693,0,0,1,.866,4.283,10.647,10.647,0,0,1-.866,4.276,11.234,11.234,0,0,1-2.351,3.495,11.105,11.105,0,0,1-3.493,2.365A10.64,10.64,0,0,1,91.007-858Zm.006-1.65a8.981,8.981,0,0,0,6.614-2.736,9.049,9.049,0,0,0,2.723-6.628,9.012,9.012,0,0,0-2.717-6.614A9.015,9.015,0,0,0,91-878.35a9.042,9.042,0,0,0-6.614,2.717A8.992,8.992,0,0,0,81.65-869a9.01,9.01,0,0,0,2.736,6.614A9.026,9.026,0,0,0,91.014-859.65ZM91-869Z" transform="translate(-80 880)" fill="#de3831"/>
+      </svg>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <g id="Ellipse_42" data-name="Ellipse 42" fill="#fff" stroke="#de3831" stroke-width="1.5">
+          <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+          <circle cx="7.5" cy="7.5" r="6.75" fill="none"/>
+        </g>
+      </svg> -->
+    </div>
+    <div class="date">
+      <ion-label>12-03-2023</ion-label>
+    </div>
+    <div class="status">
+      <ion-label>Pending</ion-label>
+    </div>
+    <div class="amount">
+      <ion-label>1,294.49</ion-label>
+    </div>
+    
+    <div class="status_bar">
+      <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
+      <div class="bar">
+        <div style="padding-top: 35px;">
+          <ion-label style="margin-left: -25px;" class="status_bar_label">Requested</ion-label>
+        </div>
+      </div>
+      <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
+      <div class="bar">
+        <div style="padding-top: 35px;">
+          <ion-label style="margin-left: -30px;" class="status_bar_label">Approved</ion-label>
+        </div>
+      </div>
+      <ion-icon class="success" name="checkmark-circle" color="success"></ion-icon>
+      <div class="bar" style=" border-bottom: 3px solid rgba(199, 197, 197, 0.5)">
+        <div style="padding-top: 35px;">
+          <ion-label style="margin-left: -30px;" class="status_bar_label">Processing</ion-label>
+        </div>
+      </div>
+      <ion-icon style="opacity: 0.3;" class="success" name="checkmark-circle" color="success"></ion-icon>
+      <div style="padding-top: 35px;">
+        <ion-label style="margin-left: -45px;" class="status_bar_label">Completed</ion-label>
+      </div>
+    </div>
+    
+    <div class="hist_payments" *ngFor="let i of invoices">
+      <div class="hist_status_icon" [ngSwitch]="i.payment">
+        
+        <svg *ngSwitchCase="'Failed'" xmlns="http://www.w3.org/2000/svg" width="22.028" height="22.028" viewBox="0 0 22.028 22.028">
+          <path id="cancel_FILL0_wght400_GRAD0_opsz48" d="M86.884-863.7l4.13-4.13,4.13,4.13,1.156-1.156-4.13-4.13,4.13-4.13-1.156-1.156-4.13,4.13-4.13-4.13-1.156,1.156,4.13,4.13-4.13,4.13Zm4.13,5.727a10.656,10.656,0,0,1-4.268-.867,11.171,11.171,0,0,1-3.511-2.368,11.171,11.171,0,0,1-2.368-3.511A10.657,10.657,0,0,1,80-868.986a10.724,10.724,0,0,1,.867-4.3,11.006,11.006,0,0,1,2.368-3.5,11.289,11.289,0,0,1,3.511-2.354A10.656,10.656,0,0,1,91.014-880a10.724,10.724,0,0,1,4.3.867,11.121,11.121,0,0,1,3.5,2.354,11.121,11.121,0,0,1,2.354,3.5,10.724,10.724,0,0,1,.867,4.3,10.657,10.657,0,0,1-.867,4.268,11.29,11.29,0,0,1-2.354,3.511,11.006,11.006,0,0,1-3.5,2.368A10.724,10.724,0,0,1,91.014-857.972Zm0-1.652a9.009,9.009,0,0,0,6.636-2.74,9.045,9.045,0,0,0,2.726-6.622,9.032,9.032,0,0,0-2.726-6.636,9.032,9.032,0,0,0-6.636-2.726,9.045,9.045,0,0,0-6.622,2.726,9.009,9.009,0,0,0-2.74,6.636,9.022,9.022,0,0,0,2.74,6.622A9.022,9.022,0,0,0,91.014-859.625ZM91.014-868.986Z" transform="translate(-80 880)" fill="#de3831"/>
+        </svg>
+        <svg *ngSwitchCase="'Completed'" xmlns="http://www.w3.org/2000/svg" width="22.028" height="22" viewBox="0 0 22.028 22">
+          <path id="task_alt_FILL0_wght400_GRAD0_opsz48" d="M91-858a11.157,11.157,0,0,1-4.345-.839,10.736,10.736,0,0,1-3.493-2.324,10.736,10.736,0,0,1-2.324-3.492A11.157,11.157,0,0,1,80-869a11.086,11.086,0,0,1,.839-4.318,10.736,10.736,0,0,1,2.324-3.492,10.919,10.919,0,0,1,3.493-2.338A11,11,0,0,1,91-880a11.028,11.028,0,0,1,3.85.66,11.321,11.321,0,0,1,3.218,1.815l-1.183,1.183a9.2,9.2,0,0,0-2.695-1.485A9.544,9.544,0,0,0,91-878.35a9.053,9.053,0,0,0-6.669,2.681A9.053,9.053,0,0,0,81.65-869a9.053,9.053,0,0,0,2.681,6.669A9.053,9.053,0,0,0,91-859.65a9.053,9.053,0,0,0,6.669-2.681A9.053,9.053,0,0,0,100.35-869a10.3,10.3,0,0,0-.124-1.609,9.5,9.5,0,0,0-.371-1.526l1.265-1.265a10.514,10.514,0,0,1,.66,2.118A11.613,11.613,0,0,1,102-869a11,11,0,0,1-.853,4.345,10.92,10.92,0,0,1-2.338,3.492,10.736,10.736,0,0,1-3.493,2.324A11.086,11.086,0,0,1,91-858Zm-1.622-5.995L84.84-868.56l1.238-1.238,3.3,3.3,11.385-11.385,1.265,1.237L95.484-870.1Z" transform="translate(-80 880)" fill="#108258"/>
+        </svg>
+      </div>
+      <div class="hist_payment_date">
+        <ion-label>{{ i.date }}</ion-label>
+      </div>
+      <div class="hist_payment_status">
+        <ion-label>{{ i.payment }}</ion-label>
+        <!-- <svg *ngIf="!i.status" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+          <g id="Ellipse_42" data-name="Ellipse 42" fill="#fff" stroke="#de3831" stroke-width="1.5">
+            <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+            <circle cx="7.5" cy="7.5" r="6.75" fill="none"/>
+          </g>
+        </svg> -->
+        <svg *ngIf="!i.status" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+          <path id="pending_FILL0_wght400_GRAD0_opsz48" d="M85.118-867.625a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.335,1.335,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,85.118-867.625Zm5.885,0a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.335,1.335,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,91-867.625Zm5.857,0a1.318,1.318,0,0,0,.973-.4,1.335,1.335,0,0,0,.4-.976,1.319,1.319,0,0,0-.4-.973,1.335,1.335,0,0,0-.976-.4,1.318,1.318,0,0,0-.973.4,1.334,1.334,0,0,0-.4.976,1.318,1.318,0,0,0,.4.973A1.334,1.334,0,0,0,96.861-867.625ZM91.007-858a10.648,10.648,0,0,1-4.276-.866,11.178,11.178,0,0,1-3.5-2.365,11.171,11.171,0,0,1-2.365-3.5A10.668,10.668,0,0,1,80-869.014a10.668,10.668,0,0,1,.866-4.281,11.007,11.007,0,0,1,2.365-3.488,11.291,11.291,0,0,1,3.5-2.351A10.667,10.667,0,0,1,91.014-880a10.667,10.667,0,0,1,4.281.866,11.123,11.123,0,0,1,3.488,2.351,11.108,11.108,0,0,1,2.351,3.492,10.693,10.693,0,0,1,.866,4.283,10.647,10.647,0,0,1-.866,4.276,11.234,11.234,0,0,1-2.351,3.495,11.105,11.105,0,0,1-3.493,2.365A10.64,10.64,0,0,1,91.007-858Zm.006-1.65a8.981,8.981,0,0,0,6.614-2.736,9.049,9.049,0,0,0,2.723-6.628,9.012,9.012,0,0,0-2.717-6.614A9.015,9.015,0,0,0,91-878.35a9.042,9.042,0,0,0-6.614,2.717A8.992,8.992,0,0,0,81.65-869a9.01,9.01,0,0,0,2.736,6.614A9.026,9.026,0,0,0,91.014-859.65ZM91-869Z" transform="translate(-80 880)" fill="#de3831"/>
+        </svg>
+      </div>
+      <div class="hist_payment_amount">
+        <ion-label>{{ i.amount }}</ion-label>
+      </div>
     </div>
   </div>
-  <div class="border_bottom"></div>
-  <div class="status">
+  
+  <!-- <div class="status">
     <ion-row class="status_row">
       <ion-col size="3" class="key">
         <ion-label class="key">Date:</ion-label>
@@ -92,9 +200,9 @@
         <ion-label style="margin-left: -45px;" class="status_bar_label">Completed</ion-label>
       </div>
     </div>
-  </div>
+  </div> -->
   
-  <div class="history">
+  <!-- <div class="history">
     <ion-row class="history_item" lines="none" *ngFor="let i of invoices">
       <ion-col size="2" id="invoice" size="1" class="invoice icon">
         <ng-container [ngSwitch]="i.payment">
@@ -119,7 +227,7 @@
         <ion-label type="number">{{ i.amount | currency: 'R' }}</ion-label>
       </ion-col> 
     </ion-row>
-  </div>
+  </div> -->
 </div>
 
 

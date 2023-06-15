@@ -95,7 +95,7 @@
   <ion-footer>
     <div class="notice">
       <small><strong>Please note:</strong></small>
-      <small *ngIf="showHome" id="notice">The city will be implementing a standard rates increase from 1 July 2023</small>
+      <small id="notice">The city will be implementing a standard rates increase from 1 July 2023</small>
     </div>
     <ion-toolbar class="bottom" *ngIf="!showInvoicePDF">
       
@@ -147,7 +147,7 @@
         </ion-row>
       </div>
       
-      <div *ngIf="showPayment || showProcessPayment" class="row">
+      <!-- <div *ngIf="showPayment || showProcessPayment" class="row">
         <div class="border_bottom"></div>
         <ion-row>
           <ion-col size="2">
@@ -177,7 +177,7 @@
             
           </ion-col>
         </ion-row>
-      </div>
+      </div> -->
       <div class="menu">
         <ion-row>
           <ion-col size="4" class="homeIcon">
